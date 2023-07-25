@@ -1,26 +1,35 @@
-import React,{useState}  from "react";
-import Header from "./components/Header/Header";
-import { ThemeProvider } from "styled-components";
-import { GlobalStyles } from "./components/globalStyles";
-import { lightTheme, darkTheme } from "./components/Theme";
+import React  from "react";
+import Main from "./pages/main/Main";
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from "react-router-dom";
 
+import ErrorBoundary from "./ErrorBoundary";
+import Layout from "./routes/Layout";
 function App() {
-  const [theme, setTheme] = useState("light");
-  const themeToggler = () => {
-    theme === "light" ? setTheme("dark") : setTheme("light");
-  };
 
- 
+  const routesFromElements = createRoutesFromElements(
+    <Route element={<Layout/>}>
+      <Route index element={<Main/>} />
+      <Route path="/" element={<Main/>} errorElement={ErrorBoundary} />
+    </Route>
+  );
+  
+  const router = createBrowserRouter(routesFromElements);
+  
+  
 
 
   return (
-    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      <GlobalStyles/>
+    
       <div id="app" className="App">
-        <Header handleTheme={themeToggler}></Header>
+        <RouterProvider router={router}/>
  
       </div>
-      </ThemeProvider>
+   
   );
 }
 
