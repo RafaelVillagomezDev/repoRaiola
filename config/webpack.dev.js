@@ -9,6 +9,8 @@ const devConfig={
         },
         compress: true,
         port: 9000,
+        hot:true,
+        historyApiFallback: true,
       },
     devtool:"eval-source-map"
     

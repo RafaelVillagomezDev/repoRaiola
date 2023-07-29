@@ -2,7 +2,7 @@ import React from "react";
 // @src/components/Layout.jsx
 import { Link, Outlet } from "react-router-dom";
 
-const Layout = () => (
+const  Layout = () => (
   <div>
     <ul>
       <li>
