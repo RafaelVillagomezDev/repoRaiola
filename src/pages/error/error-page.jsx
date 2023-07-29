@@ -11,8 +11,8 @@ export default function ErrorPage() {
   // <i>{error.statusText || error.message}</i>
   return (
     <div id="error-page">
-      <ErrorContainer>
-        <Container >
+      <ErrorContainer id="error-main">
+        <Container className="error-container" >
          <Title>
            Error
          </Title>
