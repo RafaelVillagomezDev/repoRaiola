@@ -12,6 +12,10 @@ export const Portada = styled.div`
   }
 `;
 
+export const ContentMain=styled.div`
+  height: 100vh;
+`
+
 export const PortadaContainer = styled.div`
   width: 46%;
   justify-content: center;
@@ -57,3 +61,41 @@ export const ButtonTitle = styled.span`
   font-weight: bold;
   color: white;
 `;
+export const SectionAbout = styled.div`
+   height: 50vh;
+   background-color: #4b538b;
+   display: flex;
+   flex-direction: column;
+   padding: 32px;
+   gap:2rem;
+   @media only screen and (${devices.xs}) {
+    flex-direction: column;
+    gap:1rem;
+  }
+  @media only screen and (${devices.sm}) {
+    flex-direction: row;
+    gap:1rem;
+  }
+  
+`;
+export const AboutContent = styled.div`
+   background-color: red;
+   @media only screen and (${devices.xs}) {
+    width: 100%;
+  }
+  @media only screen and (${devices.sm}) {
+    width: 50%;
+  }
+`;
+export const AboutSkills = styled.div`
+  
+   background-color: yellow;
+   @media only screen and (${devices.xs}) {
+    width: 100%;
+  }
+  @media only screen and (${devices.sm}) {
+    width: 50%;
+  }
+`;
+
+
