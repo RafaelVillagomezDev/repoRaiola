@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../../components/Header/Header";
+import Content from "../../components/Content/Content";
 
 
 function Main(){
@@ -7,7 +8,7 @@ function Main(){
     
         <div>
             <Header/>
-            <h1>Main</h1>
+            <Content/>
         </div>
         
      

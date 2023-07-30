@@ -21,7 +21,7 @@ export const Container = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size:200px;
-  @media only screen and (${devices.xs}) {
+  @media only screen and (${devices.md}) {
     height: 50vh;
     background-position: bottom;
     background-size:150px;
