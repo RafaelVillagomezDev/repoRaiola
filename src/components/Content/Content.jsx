@@ -10,9 +10,40 @@ import {
   SectionAbout,
   AboutSkills,
   AboutContent,
+  CommonTitle,
+  CommonContent,
+  ContentSkill,
+  BoxSkill,
 } from "./styles/Content";
 
 function Content() {
+  const SkillsData = [
+    {
+      name: "HTML",
+    },
+    {
+      name: "CSS",
+    },
+    {
+      name: "JS",
+    },
+    {
+      name: "MYSQL",
+    },
+    {
+      name: "PHP",
+    },
+    {
+      name: "REACT",
+    },
+    {
+      name: "NODE",
+    },
+  ];
+
+  const elemSkill = SkillsData.map((element) => {
+    return <BoxSkill>{element.name}</BoxSkill>;
+  });
   return (
     <ContentMain>
       <Portada>
@@ -20,8 +51,8 @@ function Content() {
           <PortadaTitle>Full Stack Developer</PortadaTitle>
           <PortadaContent>
             Un desarrollador web enfocado en frontend que construye el frontend
-            de sitios web y aplicaciones web <br /> que conducen al éxito del
-            producto en general.
+            de sitios web y aplicaciones web que conducen al éxito del producto
+            en general.
           </PortadaContent>
           <PortadaButton>
             <ButtonTitle>PROYECTOS</ButtonTitle>
@@ -29,8 +60,23 @@ function Content() {
         </PortadaContainer>
       </Portada>
       <SectionAbout>
-         <AboutContent>hsjs</AboutContent>
-         <AboutSkills>jshsj</AboutSkills>
+        <AboutContent>
+          <CommonTitle>Conoceme</CommonTitle>
+          <CommonContent>
+            Profesional con experiencia en tecnologías Front End (React, Vue,
+            JavaScript, HTML, CSS) y Back End (Node, Express).
+          </CommonContent>
+          <CommonContent>
+            También utilizo habitualmente Testing y TypeScript para garantizar
+            la calidad de mi código. Resolutivo, eficaz y dedicado a trabajar
+            para cumplir no solo mis objetivos sino los del grupo en que
+            trabaje.
+          </CommonContent>
+        </AboutContent>
+        <AboutSkills>
+          <CommonTitle>Skills</CommonTitle>
+          <ContentSkill>{elemSkill}</ContentSkill>
+        </AboutSkills>
       </SectionAbout>
     </ContentMain>
   );
