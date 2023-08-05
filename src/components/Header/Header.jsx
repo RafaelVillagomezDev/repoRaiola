@@ -13,6 +13,7 @@ import { GlobalStyles } from "../globalStyles";
 import { lightTheme, darkTheme } from "../Theme";
 import gmail from "../../../public/assets/icons/gmail.png"
 import linkdn from "../../../public/assets/icons/linkedin.png"
+import whatsapp from "../../../public/assets/icons/whatsapp.png"
 
 function Header() {
   const [theme, setTheme] = useState("light");
@@ -34,6 +35,10 @@ function Header() {
       enlace: "https://www.linkedin.com/in/rafaelvillagomez/",
       contentUrl: linkdn,
     },
+    {
+      enlace:"https://wa.me/618152241?text=Hola%20Yandry%20me%20gustaria%20hablar%20de%20trabajo%20",
+      contentUrl:whatsapp,
+    }
   ];
 
   const elemLink = LinkData.map((element) => {

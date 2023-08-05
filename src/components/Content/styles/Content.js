@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { devices } from "../../../styles/mixin_styledComponent";
+import portadaImg from "../../../../public/assets/img/portada.jpg";
 export const Portada = styled.div`
-  height: 50vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -9,8 +9,16 @@ export const Portada = styled.div`
   padding: 0rem 2rem;
 
   @media only screen and (${devices.xs}) {
-    height: 33vh;
-    padding: 1rem 2rem;
+    height: 67vh;
+  }
+  @media only screen and (${devices.sm}) {
+    height: 70vh;
+  }
+  @media only screen and (${devices.md}) {
+    height: 50vh;
+  }
+  @media only screen and (${devices.lg}) {
+    height: 90vh;
   }
 `;
 
@@ -19,15 +27,58 @@ export const ContentMain = styled.div`
 `;
 
 export const PortadaContainer = styled.div`
-  width: 46%;
+  width: 50%;
   justify-content: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   gap: 2rem;
+
   @media only screen and (${devices.xs}) {
     width: 100%;
     gap: 0rem;
+  }
+`;
+
+export const PortadaBox = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+`;
+
+export const PortadaImg = styled.img`
+  background-image: url(${portadaImg});
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 60px;
+  @media only screen and (${devices.xs}) {
+    display: none;
+  }
+  @media only screen and (${devices.sm}) {
+    display: block;
+  }
+`;
+
+export const PortadaImgMobile = styled.img`
+  background-image: url(${portadaImg});
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+  margin: 1rem;
+  @media only screen and (${devices.xs}) {
+    display: block;
+  }
+  @media only screen and (${devices.sm}) {
+    display: none;
   }
 `;
 
@@ -35,6 +86,8 @@ export const PortadaTitle = styled.h1`
   font-size: 70px;
   font-weight: bold;
   padding-bottom: 18px;
+  color: orange;
+  -webkit-text-stroke: 1px black;
   @media only screen and (${devices.xs}) {
     font-size: 25px;
     padding-bottom: 14px;
@@ -74,6 +127,7 @@ export const SectionAbout = styled.div`
     flex-direction: column;
     gap: 1rem;
     padding: 8px;
+    height: 80vh;
   }
   @media only screen and (${devices.sm}) {
     flex-direction: row;
@@ -86,8 +140,6 @@ export const AboutContent = styled.div`
 export const AboutSkills = styled.div`
   padding: 1.5rem;
 `;
-
-
 
 export const CommonTitle = styled.h1`
   font-size: 25px;

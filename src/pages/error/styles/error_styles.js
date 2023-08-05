@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import background from "../../../../public/assets/img/robot_error.png"
 import { devices } from '../../../styles/mixin_styledComponent';
+
 export const ErrorContainer = styled.div`
   font-size: 1.5em;
   text-align: center;

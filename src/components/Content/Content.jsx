@@ -14,7 +14,11 @@ import {
   CommonContent,
   ContentSkill,
   BoxSkill,
+  PortadaBox,
+  PortadaImg,
+  PortadaImgMobile,
 } from "./styles/Content";
+
 
 function Content() {
   const SkillsData = [
@@ -48,7 +52,9 @@ function Content() {
     <ContentMain>
       <Portada>
         <PortadaContainer>
-          <PortadaTitle>Full Stack Developer</PortadaTitle>
+         <PortadaBox>
+         <PortadaTitle>Full Stack Developer</PortadaTitle>
+         <PortadaImgMobile></PortadaImgMobile>
           <PortadaContent>
             Un desarrollador web enfocado en frontend que construye el frontend
             de sitios web y aplicaciones web que conducen al éxito del producto
@@ -57,6 +63,12 @@ function Content() {
           <PortadaButton>
             <ButtonTitle>PROYECTOS</ButtonTitle>
           </PortadaButton>
+
+         </PortadaBox>
+         <PortadaImg>
+          
+         </PortadaImg>
+          
         </PortadaContainer>
       </Portada>
       <SectionAbout>

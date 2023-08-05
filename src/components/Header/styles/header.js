@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { devices } from "../../../styles/mixin_styledComponent";
 import { Link } from "react-router-dom";
 export const HeaderContainer = styled.div`
   font-size: 1.5em;
@@ -22,6 +23,12 @@ export const NavPersonalized = styled.div`
   display: flex;
   justify-content:space-around;
   gap: 1.75rem;
+   @media only screen and (${devices.xs}) {
+    gap: 0.75rem;
+  }
+  @media only screen and (${devices.sm}) {
+    gap:1.75rem;
+  }
 `;
 
 
