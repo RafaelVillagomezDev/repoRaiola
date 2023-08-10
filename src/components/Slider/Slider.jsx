@@ -1,21 +1,35 @@
 import React, { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { SliderContainer } from "./styles/slider";
-import slides from "../../proyects.json"
+import { proyects } from "../../proyects";
+// import required modules
+import { EffectCards } from 'swiper/modules';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/effect-cards';
 
 function Slider() {
+
+    
   return (
     <SliderContainer>
       <Swiper
-        spaceBetween={50}
-        slidesPerView={3}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        effect={'cards'}
+        grabCursor={true}
+        modules={[EffectCards]}
+        className="mySwiper"
       >
-      {slides.map((slide)=>{
-        <SwiperSlide>
-            <h1>{slide.title}</h1>
-        </SwiperSlide>
+      
+      {proyects.map((slide)=>{
+        return(<SwiperSlide  key={slide.id ? slide.id : index}>
+        
+        <img 
+            width={300}
+            height={300}
+            src={slide?.thumbnail}
+            alt={slide?.title}
+          />
+        </SwiperSlide>)
       })}
     
        
