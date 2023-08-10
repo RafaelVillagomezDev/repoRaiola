@@ -18,7 +18,7 @@ export const Portada = styled.div`
     height: 50vh;
   }
   @media only screen and (${devices.lg}) {
-    height: 90vh;
+    height: 72vh;
   }
 `;
 
@@ -38,6 +38,9 @@ export const PortadaContainer = styled.div`
     width: 100%;
     gap: 0rem;
   }
+  @media only screen and (${devices.sm}) {
+    gap: 5rem;
+  }
 `;
 
 export const PortadaBox = styled.div`
@@ -56,7 +59,7 @@ export const PortadaImg = styled.img`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border-radius: 60px;
+  border-radius:20px 1500px;
   @media only screen and (${devices.xs}) {
     display: none;
   }
@@ -118,16 +121,13 @@ export const ButtonTitle = styled.span`
   color: white;
 `;
 export const SectionAbout = styled.div`
-  height: 50vh;
   display: flex;
   flex-direction: column;
-  padding: 32px;
   gap: 2rem;
   @media only screen and (${devices.xs}) {
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     padding: 8px;
-    height: 80vh;
   }
   @media only screen and (${devices.sm}) {
     flex-direction: row;

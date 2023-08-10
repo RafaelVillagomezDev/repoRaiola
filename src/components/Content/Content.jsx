@@ -18,6 +18,7 @@ import {
   PortadaImg,
   PortadaImgMobile,
 } from "./styles/Content";
+import Slider from "../Slider/Slider";
 
 
 function Content() {
@@ -68,12 +69,14 @@ function Content() {
          <PortadaImg>
           
          </PortadaImg>
+         
           
         </PortadaContainer>
       </Portada>
       <SectionAbout>
         <AboutContent>
           <CommonTitle>Conoceme</CommonTitle>
+        
           <CommonContent>
             Profesional con experiencia en tecnologías Front End (React, Vue,
             JavaScript, HTML, CSS) y Back End (Node, Express).
@@ -90,6 +93,9 @@ function Content() {
           <ContentSkill>{elemSkill}</ContentSkill>
         </AboutSkills>
       </SectionAbout>
+      <Slider>
+        
+      </Slider>
     </ContentMain>
   );
 }
