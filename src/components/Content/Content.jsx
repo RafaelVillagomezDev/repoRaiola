@@ -18,7 +18,7 @@ import {
   PortadaImg,
   PortadaImgMobile,
 } from "./styles/Content";
-import Slider from "../Slider/Slider";
+import SliderCard from "../../components/Slider/SliderCard";
 
 
 function Content() {
@@ -90,12 +90,12 @@ function Content() {
         </AboutContent>
         <AboutSkills>
           <CommonTitle>Skills</CommonTitle>
-          <ContentSkill>{elemSkill}</ContentSkill>
+          <ContentSkill>
+            <SliderCard></SliderCard>
+          </ContentSkill>
         </AboutSkills>
       </SectionAbout>
-      <Slider>
-        
-      </Slider>
+     
     </ContentMain>
   );
 }

@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { SliderContainer } from "./styles/slider";
 import { proyects } from "../../proyects";
 // import required modules
 import { EffectCards } from 'swiper/modules';
@@ -8,11 +7,10 @@ import { EffectCards } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-cards';
 
-function Slider() {
+function SliderCard() {
 
     
   return (
-    <SliderContainer>
       <Swiper
         effect={'cards'}
         grabCursor={true}
@@ -28,14 +26,14 @@ function Slider() {
             height={300}
             src={slide?.thumbnail}
             alt={slide?.title}
+            
           />
         </SwiperSlide>)
       })}
     
        
       </Swiper>
-    </SliderContainer>
   );
 }
 
-export default Slider;
+export default SliderCard;

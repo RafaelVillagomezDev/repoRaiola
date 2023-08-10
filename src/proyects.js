@@ -1,18 +1,20 @@
-import perro from "../public/assets/img/portada.jpg"
+import js from "../public/assets/img/javascript_logo.jpg"
+import react from "../public/assets/img/react_logo.jpg"
+import mysql from "../public/assets/img/mysql_logo.jpg"
 export const proyects = [
   {
     id: 1,
-    title: "athelete",
-    thumbnail: perro
+    title: "Js",
+    thumbnail: js
   },
   {
-    id: 1,
-    title: "athelete",
-    thumbnail: perro
+    id: 2,
+    title: "react",
+    thumbnail: react
   },
   {
-    id: 1,
-    title: "athelete",
-    thumbnail: perro
+    id: 3,
+    title: "mysql",
+    thumbnail: mysql
   },
 ];
