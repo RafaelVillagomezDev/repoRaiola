@@ -6,19 +6,25 @@ export const Portada = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  padding: 0rem 2rem;
+
 
   @media only screen and (${devices.xs}) {
-    height: 67vh;
+    height: 56vh;
+    padding: 0rem 2rem;
+    margin: 2rem 0rem;
   }
   @media only screen and (${devices.sm}) {
     height: 70vh;
+    padding: 0rem 2rem;
   }
   @media only screen and (${devices.md}) {
     height: 50vh;
+    padding: 2rem 2rem;
   }
   @media only screen and (${devices.lg}) {
     height: 72vh;
+    padding: 2rem 5rem;
+    margin: 0rem 10rem;
   }
 `;
 
@@ -40,6 +46,9 @@ export const PortadaContainer = styled.div`
   }
   @media only screen and (${devices.sm}) {
     gap: 5rem;
+  }
+  @media only screen and (${devices.md}) {
+    gap: 1rem;
   }
 `;
 
@@ -65,7 +74,17 @@ export const PortadaImg = styled.img`
   }
   @media only screen and (${devices.sm}) {
     display: block;
+    
   }
+  @media only screen and (${devices.md}) {
+    display: block;
+    border-radius:20px 1500px;
+    
+  }
+
+ 
+
+  
 `;
 
 export const PortadaImgMobile = styled.img`
@@ -127,15 +146,27 @@ export const SectionAbout = styled.div`
   @media only screen and (${devices.xs}) {
     flex-direction: column;
     gap: 2rem;
-    padding: 8px;
+    padding: 0rem 2rem;
   }
   @media only screen and (${devices.sm}) {
     flex-direction: row;
     gap: 1rem;
+    padding: 0rem 2rem;
+  }
+  @media only screen and (${devices.md}) {
+    flex-direction: row;
+    gap: 1rem;
+    margin: 0rem;
+  }
+  @media only screen and (${devices.lg}) {
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0rem 5rem;
+    margin: 0rem 10rem;
   }
 `;
 export const AboutContent = styled.div`
-  padding: 1.5rem;
+  padding: 0rem;
 `;
 export const AboutSkills = styled.div`
   padding: 1.5rem;
@@ -149,8 +180,8 @@ export const CommonTitle = styled.h1`
 export const CommonContent = styled.p`
   font-size: 18px;
   font-weight: 400;
-  padding: 0.3rem;
   line-height: 1.3rem;
+  text-align: justify;
 `;
 
 export const ContentSkill = styled.div`

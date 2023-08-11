@@ -22,8 +22,8 @@ function SliderCard() {
         return(<SwiperSlide  key={slide.id ? slide.id : index}>
         
         <img 
-            width={300}
-            height={300}
+            width={220}
+            height={280}
             src={slide?.thumbnail}
             alt={slide?.title}
             
