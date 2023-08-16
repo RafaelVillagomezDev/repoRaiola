@@ -17,9 +17,11 @@ import {
   PortadaBox,
   PortadaImg,
   PortadaImgMobile,
+  CardContainer,
+  Separator
 } from "./styles/Content";
-import SliderCard from "../../components/Slider/SliderCard";
-
+import Card from "../Card/Card";
+import { proyects } from "../../proyects";
 
 function Content() {
   const SkillsData = [
@@ -49,6 +51,9 @@ function Content() {
   const elemSkill = SkillsData.map((element) => {
     return <BoxSkill key={element.name}>{element.name}</BoxSkill>;
   });
+
+
+
   return (
     <ContentMain>
       <Portada>
@@ -95,7 +100,11 @@ function Content() {
           </ContentSkill>
         </AboutSkills>
       </SectionAbout> 
-     
+      <CardContainer>
+        <Card id="card_content" />
+      
+
+      </CardContainer>
     </ContentMain>
   );
 }

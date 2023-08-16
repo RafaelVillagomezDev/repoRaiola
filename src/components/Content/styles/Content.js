@@ -174,3 +174,13 @@ export const BoxSkill = styled.div`
   gap: 1rem;
   background-color: orange;
 `;
+
+export const CardContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+`;
+
