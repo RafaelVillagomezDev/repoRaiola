@@ -28,14 +28,17 @@ function Header() {
   };
   const LinkData = [
     {
+      id:1,
       enlace: "mailto:yandry75@gmail.com?Subject=Oferta%20de%20trabajo%20",
       contentUrl: gmail,
     },
     {
+      id:2,
       enlace: "https://www.linkedin.com/in/rafaelvillagomez/",
       contentUrl: linkdn,
     },
     {
+      id:3,
       enlace:"https://wa.me/618152241?text=Hola%20Yandry%20me%20gustaria%20hablar%20de%20trabajo%20",
       contentUrl:whatsapp,
     }
@@ -43,7 +46,7 @@ function Header() {
 
   const elemLink = LinkData.map((element) => {
     return (
-      <LinkPersonalized to={element.enlace} contentUrl={element.contentUrl}>
+      <LinkPersonalized to={element.enlace} key={element.id} contentUrl={element.contentUrl}>
         {element.contentUrl}
       </LinkPersonalized>
     );

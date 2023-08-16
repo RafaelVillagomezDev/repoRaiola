@@ -24,7 +24,7 @@ import SliderCard from "../../components/Slider/SliderCard";
 function Content() {
   const SkillsData = [
     {
-      name: "HTML",
+      name: "JAVA",
     },
     {
       name: "CSS",
@@ -47,14 +47,14 @@ function Content() {
   ];
 
   const elemSkill = SkillsData.map((element) => {
-    return <BoxSkill>{element.name}</BoxSkill>;
+    return <BoxSkill key={element.name}>{element.name}</BoxSkill>;
   });
   return (
     <ContentMain>
       <Portada>
         <PortadaContainer>
          <PortadaBox>
-         <PortadaTitle>Full Stack Developer</PortadaTitle>
+         <PortadaTitle>Desarrollador Web</PortadaTitle>
          <PortadaImgMobile></PortadaImgMobile>
           <PortadaContent>
             Un desarrollador web enfocado en frontend que construye el frontend
@@ -73,7 +73,7 @@ function Content() {
           
         </PortadaContainer>
       </Portada>
-      <SectionAbout>
+       <SectionAbout>
         <AboutContent>
           <CommonTitle>Conoceme</CommonTitle>
         
@@ -91,10 +91,10 @@ function Content() {
         <AboutSkills>
           <CommonTitle>Skills</CommonTitle>
           <ContentSkill>
-            <SliderCard></SliderCard>
+          {elemSkill}
           </ContentSkill>
         </AboutSkills>
-      </SectionAbout>
+      </SectionAbout> 
      
     </ContentMain>
   );

@@ -6,50 +6,43 @@ export const Portada = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-
-
+  width: 100%;
+  
   @media only screen and (${devices.xs}) {
-    height: 56vh;
-    padding: 0rem 2rem;
-    margin: 2rem 0rem;
+    height: 500px;
   }
   @media only screen and (${devices.sm}) {
-    height: 70vh;
-    padding: 0rem 2rem;
+    height: 680px;
   }
-  @media only screen and (${devices.md}) {
-    height: 50vh;
-    padding: 2rem 2rem;
-  }
-  @media only screen and (${devices.lg}) {
-    height: 72vh;
-    padding: 2rem 5rem;
-    margin: 0rem 10rem;
-  }
+
 `;
 
 export const ContentMain = styled.div`
-  height: 100vh;
+  height: 150vh;
+  margin: 2rem 8rem;
+  @media only screen and (${devices.xs}) {
+    margin: 2rem 2rem;
+  }
+  @media only screen and (${devices.md}) {
+    margin: 2rem 2rem;
+  }
+  @media only screen and (${devices.lg}) {
+    margin: 2rem 4rem;
+  }
 `;
 
 export const PortadaContainer = styled.div`
-  width: 50%;
   justify-content: center;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 2rem;
+  gap: 6rem;
+
 
   @media only screen and (${devices.xs}) {
     width: 100%;
-    gap: 0rem;
   }
-  @media only screen and (${devices.sm}) {
-    gap: 5rem;
-  }
-  @media only screen and (${devices.md}) {
-    gap: 1rem;
-  }
+ 
 `;
 
 export const PortadaBox = styled.div`
@@ -62,13 +55,14 @@ export const PortadaBox = styled.div`
 
 export const PortadaImg = styled.img`
   background-image: url(${portadaImg});
-  width: 100%;
-  height: auto;
+  width:100% ;
+  height: 500px;
   min-height: 500px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border-radius:20px 1500px;
+  border-radius: 120px 360px;
+ 
   @media only screen and (${devices.xs}) {
     display: none;
   }
@@ -76,13 +70,7 @@ export const PortadaImg = styled.img`
     display: block;
     
   }
-  @media only screen and (${devices.md}) {
-    display: block;
-    border-radius:20px 1500px;
-    
-  }
 
- 
 
   
 `;
@@ -115,8 +103,11 @@ export const PortadaTitle = styled.h1`
     padding-bottom: 14px;
   }
   @media only screen and (${devices.sm}) {
-    font-size: 70px;
+    font-size: 65px;
     font-weight: bold;
+  }
+  @media only screen and (${devices.lg}) {
+    font-size: 67px;
   }
 `;
 export const PortadaContent = styled.p`
@@ -141,35 +132,20 @@ export const ButtonTitle = styled.span`
 `;
 export const SectionAbout = styled.div`
   display: flex;
-  flex-direction: column;
   gap: 2rem;
   @media only screen and (${devices.xs}) {
     flex-direction: column;
-    gap: 2rem;
-    padding: 0rem 2rem;
   }
   @media only screen and (${devices.sm}) {
     flex-direction: row;
-    gap: 1rem;
-    padding: 0rem 2rem;
   }
-  @media only screen and (${devices.md}) {
-    flex-direction: row;
-    gap: 1rem;
-    margin: 0rem;
-  }
-  @media only screen and (${devices.lg}) {
-    flex-direction: row;
-    gap: 1rem;
-    padding: 0rem 5rem;
-    margin: 0rem 10rem;
-  }
+
 `;
 export const AboutContent = styled.div`
   padding: 0rem;
 `;
 export const AboutSkills = styled.div`
-  padding: 1.5rem;
+  padding: 0rem;
 `;
 
 export const CommonTitle = styled.h1`
