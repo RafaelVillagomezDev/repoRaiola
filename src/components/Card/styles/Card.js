@@ -28,12 +28,13 @@ export const CardImage = styled.div`
 
 export const CardTextWrapper = styled.div`
   grid-area: text;
-  margin: 25px;
+  padding: 25px;
+  background-color: black;
 `;
 
 export const CardTextDate = styled.span`
   color: rgb(255, 7, 110);
-  font-size: 13px;
+  font-size: 16px;
 `;
 
 export const CardTextTitle = styled.h2`
@@ -60,8 +61,11 @@ export const CardTextTitle = styled.h2`
 
 export const CardTextBody = styled.p`
   color: grey;
+  margin-top: 1em;
   font-size: 15px;
   font-weight: 300;
+  text-align: start;
+  color: white;
 `;
 
 export const CardStatWrapper = styled.div`
@@ -73,7 +77,7 @@ export const CardStatWrapper = styled.div`
 
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  background: #5930e5;
+  background: #4b538b;
 `;
 
 export const CardStats = styled.div`
