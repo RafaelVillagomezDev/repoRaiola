@@ -1,6 +1,9 @@
 import React from "react";
 import { proyects } from "../../proyects";
 import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
 
 import {
   CardImage,
@@ -14,11 +17,40 @@ import {
   CardStatWrapper,
   Separator,
 } from "./styles/Card";
-import { Scrollbar } from 'swiper/modules';
+
+// import required modules
+import { Pagination } from "swiper/modules";
 function Card() {
   return (
-    <Swiper spaceBetween={10} slidesPerView={2}>
-   
+    <Swiper
+      spaceBetween={25}
+      pagination={{
+        clickable: true,
+      }}
+      grabCursor={true}
+      centeredSlides={true}
+      updateOnWindowResize={true}
+      initialSlide={2}
+      centeredSlidesBounds={true}
+      modules={[Pagination]}
+      className="mySwiper"
+      breakpoints={{
+        320: {
+          width: 320,
+          slidesPerView: 1.1,
+        },
+        // when window width is >= 640px
+        640: {
+          width: 640,
+          slidesPerView: 2,
+        },
+        // when window width is >= 768px
+        768: {
+          width: 768,
+          slidesPerView: 1.8,
+        },
+      }}
+    >
       {proyects.map((slide) => {
         return (
           <SwiperSlide className="swiper-slide ">
@@ -42,10 +74,9 @@ function Card() {
               </CardStatWrapper>
             </CardWrapper>
             <Separator></Separator>
-            </SwiperSlide>
+          </SwiperSlide>
         );
       })}
-     
     </Swiper>
   );
 }

@@ -66,7 +66,7 @@ function Content() {
             de sitios web y aplicaciones web que conducen al éxito del producto
             en general.
           </PortadaContent>
-          <PortadaButton>
+          <PortadaButton href="#container_proyect">
             <ButtonTitle>PROYECTOS</ButtonTitle>
           </PortadaButton>
 
@@ -99,11 +99,11 @@ function Content() {
           {elemSkill}
           </ContentSkill>
         </AboutSkills>
-      </SectionAbout> 
-      <CardContainer>
-        <Card id="card_content" />
       
-
+      </SectionAbout> 
+      <CardContainer id="container_proyect">
+      <CommonTitle>Proyectos</CommonTitle>
+        <Card id="card_content" />
       </CardContainer>
     </ContentMain>
   );

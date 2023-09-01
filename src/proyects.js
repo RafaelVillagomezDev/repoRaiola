@@ -17,9 +17,4 @@ export const proyects = [
     title: "mysql",
     thumbnail: mysql
   },
-  {
-    id: 4,
-    title: "mysql",
-    thumbnail: mysql
-  },
 ];

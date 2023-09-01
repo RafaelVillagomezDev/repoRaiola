@@ -116,13 +116,14 @@ export const PortadaContent = styled.p`
   padding-bottom: 12px;
 `;
 
-export const PortadaButton = styled.button`
+export const PortadaButton = styled.a`
   padding: 1.25em 5em;
   background-color: #4b538b;
   border-width: 2px;
   border-color: white;
   border-radius: 8em;
   margin-top: 1rem;
+  text-decoration: none;
 `;
 
 export const ButtonTitle = styled.span`
@@ -176,11 +177,8 @@ export const BoxSkill = styled.div`
 `;
 
 export const CardContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  width: 100%;
+  height: 600px;
+  padding-top: 1.5rem;
 `;
 
