@@ -16,6 +16,8 @@ export const CardWrapper = styled.div`
   background: #000;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
   text-align: center;
+  border-radius: 15px;
+  border: solid 2px floralwhite;
 `;
 
 export const CardImage = styled.div`

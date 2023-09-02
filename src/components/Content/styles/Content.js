@@ -18,7 +18,7 @@ export const Portada = styled.div`
 `;
 
 export const ContentMain = styled.div`
-  height: 150vh;
+  height: 200vh;
   margin: 2rem 8rem;
   @media only screen and (${devices.xs}) {
     margin: 2rem 2rem;
@@ -178,7 +178,8 @@ export const BoxSkill = styled.div`
 
 export const CardContainer = styled.div`
   width: 100%;
-  height: 600px;
+  height: 550px;
   padding-top: 1.5rem;
+ 
 `;
 

@@ -22,6 +22,7 @@ import {
 } from "./styles/Content";
 import Card from "../Card/Card";
 import { proyects } from "../../proyects";
+import Footer from "../Footer/Footer";
 
 function Content() {
   const SkillsData = [
@@ -55,6 +56,7 @@ function Content() {
 
 
   return (
+    <>
     <ContentMain>
       <Portada>
         <PortadaContainer>
@@ -105,7 +107,10 @@ function Content() {
       <CommonTitle>Proyectos</CommonTitle>
         <Card id="card_content" />
       </CardContainer>
+     
     </ContentMain>
+    <Footer/>
+    </>
   );
 }
 

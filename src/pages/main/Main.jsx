@@ -3,21 +3,14 @@ import Header from "../../components/Header/Header";
 import Content from "../../components/Content/Content";
 
 
-
-
-
-function Main(){
-    return (
+function Main() {
+  return (
+    <>
+      <Header />
+      <Content />
     
-        <div>
-            <Header/>
-            <Content/>
-          
-          
-        </div>
-        
-     
-    )
+    </>
+  );
 }
 
-export default Main
+export default Main;
