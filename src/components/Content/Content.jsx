@@ -62,9 +62,7 @@ function Content() {
               <PortadaTitle>Desarrollador Web</PortadaTitle>
               <PortadaImgMobile></PortadaImgMobile>
               <PortadaContent>
-                Un desarrollador web enfocado en frontend que construye el
-                frontend de sitios web y aplicaciones web que conducen al éxito
-                del producto en general.
+                Un desarrollador web que construye el frontend de sitios y aplicaciones web que conducen al éxito.
               </PortadaContent>
               <PortadaButton href="#container_proyect">
                 <ButtonTitle>PROYECTOS</ButtonTitle>
@@ -75,7 +73,7 @@ function Content() {
         </Portada>
         <SectionAbout>
           <AboutContent>
-            <CommonTitle>Conoceme</CommonTitle>
+            <CommonTitle>Conóceme</CommonTitle>
 
             <CommonContent>
               Profesional con experiencia en tecnologías Front End (React, Vue,
@@ -83,9 +81,8 @@ function Content() {
             </CommonContent>
             <CommonContent>
               También utilizo habitualmente Testing y TypeScript para garantizar
-              la calidad de mi código. Resolutivo, eficaz y dedicado a trabajar
-              para cumplir no solo mis objetivos sino los del grupo en que
-              trabaje.
+              la calidad de mi código . Soy una persona resolutiva, eficaz y dedicada a trabajar
+              para cumplir no solo mis objetivos sino los del equipo en el que trabaje.
             </CommonContent>
           </AboutContent>
           <AboutSkills>
