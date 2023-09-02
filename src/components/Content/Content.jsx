@@ -18,7 +18,7 @@ import {
   PortadaImg,
   PortadaImgMobile,
   CardContainer,
-  Separator
+  Separator,
 } from "./styles/Content";
 import Card from "../Card/Card";
 import { proyects } from "../../proyects";
@@ -53,63 +53,53 @@ function Content() {
     return <BoxSkill key={element.name}>{element.name}</BoxSkill>;
   });
 
-
-
   return (
     <>
-    <ContentMain>
-      <Portada>
-        <PortadaContainer>
-         <PortadaBox>
-         <PortadaTitle>Desarrollador Web</PortadaTitle>
-         <PortadaImgMobile></PortadaImgMobile>
-          <PortadaContent>
-            Un desarrollador web enfocado en frontend que construye el frontend
-            de sitios web y aplicaciones web que conducen al éxito del producto
-            en general.
-          </PortadaContent>
-          <PortadaButton href="#container_proyect">
-            <ButtonTitle>PROYECTOS</ButtonTitle>
-          </PortadaButton>
+      <ContentMain>
+        <Portada>
+          <PortadaContainer>
+            <PortadaBox>
+              <PortadaTitle>Desarrollador Web</PortadaTitle>
+              <PortadaImgMobile></PortadaImgMobile>
+              <PortadaContent>
+                Un desarrollador web enfocado en frontend que construye el
+                frontend de sitios web y aplicaciones web que conducen al éxito
+                del producto en general.
+              </PortadaContent>
+              <PortadaButton href="#container_proyect">
+                <ButtonTitle>PROYECTOS</ButtonTitle>
+              </PortadaButton>
+            </PortadaBox>
+            <PortadaImg></PortadaImg>
+          </PortadaContainer>
+        </Portada>
+        <SectionAbout>
+          <AboutContent>
+            <CommonTitle>Conoceme</CommonTitle>
 
-         </PortadaBox>
-         <PortadaImg>
-          
-         </PortadaImg>
-         
-          
-        </PortadaContainer>
-      </Portada>
-       <SectionAbout>
-        <AboutContent>
-          <CommonTitle>Conoceme</CommonTitle>
-        
-          <CommonContent>
-            Profesional con experiencia en tecnologías Front End (React, Vue,
-            JavaScript, HTML, CSS) y Back End (Node, Express).
-          </CommonContent>
-          <CommonContent>
-            También utilizo habitualmente Testing y TypeScript para garantizar
-            la calidad de mi código. Resolutivo, eficaz y dedicado a trabajar
-            para cumplir no solo mis objetivos sino los del grupo en que
-            trabaje.
-          </CommonContent>
-        </AboutContent>
-        <AboutSkills>
-          <CommonTitle>Skills</CommonTitle>
-          <ContentSkill>
-          {elemSkill}
-          </ContentSkill>
-        </AboutSkills>
-      
-      </SectionAbout> 
-      <CardContainer id="container_proyect">
-      <CommonTitle>Proyectos</CommonTitle>
-        <Card id="card_content" />
-      </CardContainer>
-     
-    </ContentMain>
-    <Footer/>
+            <CommonContent>
+              Profesional con experiencia en tecnologías Front End (React, Vue,
+              JavaScript, HTML, CSS) y Back End (Node, Express).
+            </CommonContent>
+            <CommonContent>
+              También utilizo habitualmente Testing y TypeScript para garantizar
+              la calidad de mi código. Resolutivo, eficaz y dedicado a trabajar
+              para cumplir no solo mis objetivos sino los del grupo en que
+              trabaje.
+            </CommonContent>
+          </AboutContent>
+          <AboutSkills>
+            <CommonTitle>Skills</CommonTitle>
+            <ContentSkill>{elemSkill}</ContentSkill>
+          </AboutSkills>
+        </SectionAbout>
+        <CardContainer id="container_proyect">
+          <CommonTitle>Proyectos</CommonTitle>
+          <Card id="card_content" />
+        </CardContainer>
+      </ContentMain>
+
+      <Footer />
     </>
   );
 }
