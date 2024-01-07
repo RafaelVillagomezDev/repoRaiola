@@ -22,6 +22,7 @@ import {
 import { Pagination } from "swiper/modules";
 function Card() {
   return (
+    
     <Swiper
      
       spaceBetween={25}
@@ -37,8 +38,8 @@ function Card() {
       className="mySwiper"
       breakpoints={{
         320: {
-          width: 380,
-          slidesPerView: 1.1,
+          width: 300,
+          slidesPerView: 1,
         },
         // when window width is >= 640px
         640: {
@@ -47,8 +48,12 @@ function Card() {
         },
         // when window width is >= 768px
         768: {
+          width: 450,
+          slidesPerView: 1.2,
+        },
+        950: {
           width: 768,
-          slidesPerView: 2,
+          slidesPerView: 3,
         },
       }}
     >
