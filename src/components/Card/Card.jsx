@@ -23,6 +23,7 @@ import { Pagination } from "swiper/modules";
 function Card() {
   return (
     <Swiper
+     
       spaceBetween={25}
       pagination={{
         clickable: true,
@@ -30,13 +31,13 @@ function Card() {
       grabCursor={true}
       centeredSlides={true}
       updateOnWindowResize={true}
-      initialSlide={2}
+      initialSlide={1}
       centeredSlidesBounds={true}
       modules={[Pagination]}
       className="mySwiper"
       breakpoints={{
         320: {
-          width: 320,
+          width: 380,
           slidesPerView: 1.1,
         },
         // when window width is >= 640px
@@ -47,13 +48,13 @@ function Card() {
         // when window width is >= 768px
         768: {
           width: 768,
-          slidesPerView: 1.8,
+          slidesPerView: 2,
         },
       }}
     >
       {proyects.map((slide) => {
         return (
-          <SwiperSlide className="swiper-slide ">
+          <SwiperSlide className="swiper-slide">
             <CardWrapper key={slide.id} className="yandry">
               <CardImage background={slide.thumbnail} />
               <CardTextWrapper>
