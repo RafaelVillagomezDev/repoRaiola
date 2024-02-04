@@ -17,5 +17,7 @@ jobs:
         username: yandrydev@yandrydev.com
         password: ${{ secrets.FTP_PASSWORD }}
         exclude: |
+          **/.git*
+          **/.git*/**
           **/node_modules/**
         
