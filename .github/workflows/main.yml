@@ -17,4 +17,4 @@ jobs:
         username: repoRaiola@yandrydev.com
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/
-        server-dir: /home/aspvovej/yandrydev.com/yandrydev
+        server-dir: /home/aspvovej/yandrydev.com/yandrydev/
