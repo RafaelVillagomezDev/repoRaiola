@@ -20,6 +20,4 @@ jobs:
           **/.git*
           **/.git*/**
           **/node_modules/**
-          **/.github/**
-          /*.babelrc*/
         
