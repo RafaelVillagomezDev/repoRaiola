@@ -16,6 +16,7 @@ jobs:
         server: ftp.yandrydev.com
         username: yandrydev@yandrydev.com
         password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./dist/
         exclude: |
           **/.git*
           **/.git*/**
