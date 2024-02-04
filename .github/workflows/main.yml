@@ -17,4 +17,3 @@ jobs:
         username: yandrydev@yandrydev.com
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./dist/
-        server-dir: /porfolio/
