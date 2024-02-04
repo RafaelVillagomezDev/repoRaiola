@@ -4,7 +4,6 @@ import mysql from "../public/assets/img/fondo_1.jpg"
 
 
 
-
 export const proyects = [
   {
     id: 1,
