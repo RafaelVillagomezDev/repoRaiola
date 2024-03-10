@@ -8,18 +8,17 @@ import ErrorPage from "./pages/error/error-page";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/porfolio",
     element: <Main />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/porfolio",
+    path: "/home",
     element: <Main/>,
   },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
 
 root.render(
   <React.StrictMode>
