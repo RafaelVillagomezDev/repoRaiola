@@ -8,12 +8,12 @@ import ErrorPage from "./pages/error/error-page";
 
 const router = createBrowserRouter([
   {
-    path: "/porfolio",
+    path: "/",
     element: <Main />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/home",
+    path: "/porfolio",
     element: <Main/>,
   },
 ]);
