@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { devices } from "../../../styles/mixin_styledComponent";
 import portadaImg from "../../../../public/assets/img/portada.jpg";
+
 export const Portada = styled.div`
   display: flex;
   align-items: center;
@@ -53,7 +54,7 @@ export const PortadaBox = styled.div`
   text-align: left;
 `;
 
-export const PortadaImg = styled.img`
+export const PortadaImg = styled.div`
   background-image: url(${portadaImg});
   width:100% ;
   height: 500px;
@@ -99,7 +100,7 @@ export const PortadaTitle = styled.h1`
   color: orange;
   -webkit-text-stroke: 1px black;
   @media only screen and (${devices.xs}) {
-    font-size: 25px;
+    font-size: 35px;
     padding-bottom: 14px;
   }
   @media only screen and (${devices.sm}) {
@@ -153,7 +154,30 @@ export const CommonTitle = styled.h1`
   font-size: 25px;
   font-weight: bold;
   padding-bottom: 1rem;
+  @media only screen and (${devices.sm}) {
+    font-size: 30px;
+  }
 `;
+
+export const CommonTitleV1 = styled.h1`
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  
+  @media only screen and (${devices.xs}) {
+    font-size: 25px;
+    text-align:start;
+    
+  }
+
+  @media only screen and (${devices.sm}) {
+    font-size: 30px;
+    text-align: center;
+  }
+`;
+
+
+
 export const CommonContent = styled.p`
   font-size: 18px;
   font-weight: 400;
@@ -180,6 +204,9 @@ export const CardContainer = styled.div`
   width: 100%;
   height: auto;
   padding-top: 1.5rem;
+  @media only screen and (${devices.md}) {
+    flex-direction: column;
+  }
  
 `;
 

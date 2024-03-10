@@ -19,6 +19,8 @@ import {
   PortadaImgMobile,
   CardContainer,
   Separator,
+  CommonTitleV1,
+  IconCohete,
 } from "./styles/Content";
 import Card from "../Card/Card";
 import { proyects } from "../../proyects";
@@ -91,7 +93,7 @@ function Content() {
           </AboutSkills>
         </SectionAbout>
         <CardContainer id="container_proyect">
-          <CommonTitle>Proyectos</CommonTitle>
+          <CommonTitleV1>Proyectos </CommonTitleV1>
           <Card id="card_content" />
         </CardContainer>
       </ContentMain>

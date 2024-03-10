@@ -24,15 +24,14 @@ function Card() {
   return (
     
     <Swiper
-     
-      spaceBetween={25}
+      spaceBetween={30}
       pagination={{
         clickable: true,
       }}
       grabCursor={true}
       centeredSlides={true}
       updateOnWindowResize={true}
-      initialSlide={1}
+      initialSlide={0}
       centeredSlidesBounds={true}
       modules={[Pagination]}
       className="mySwiper"
@@ -41,19 +40,23 @@ function Card() {
           width: 300,
           slidesPerView: 1,
         },
+        400: {
+          width: 340,
+          slidesPerView: 1,
+        },
         // when window width is >= 640px
         640: {
           width: 640,
-          slidesPerView: 2,
+          slidesPerView: 3,
         },
         // when window width is >= 768px
         768: {
           width: 450,
-          slidesPerView: 1.2,
+          slidesPerView: 3,
         },
         950: {
-          width: 768,
-          slidesPerView: 3,
+          width: 500,
+          slidesPerView: 1,
         },
       }}
     >
