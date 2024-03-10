@@ -1,6 +1,4 @@
-on:
-  push:
-    branches: [ master, main ]
+on: push
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -8,11 +6,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
-      uses: actions/checkout@v3
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: actions/checkout@v2
+
+    - name: Use Node.js 14
+      uses: actions/setup-node@v2
       with:
-        server: ftp.yandrydev.com
-        username: yandrydev@yandrydev.com
+        node-version: '14'
+      
+    - name: 🔨 Build Project
+      run: |
+        npm install
+        npm run build
+    
+    - name: List output files
+      run: find build/ -print
+      
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.1.0
+      with:
+        server:  yandry@yandrydev.com
+        username:  ftp.yandrydev.com
         password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: build/
