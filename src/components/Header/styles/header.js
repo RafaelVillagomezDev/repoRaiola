@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { devices } from "../../../styles/mixin_styledComponent";
 import { Link } from "react-router-dom";
+
+
+
+
 export const HeaderContainer = styled.div`
   font-size: 1.5em;
   text-align: center;

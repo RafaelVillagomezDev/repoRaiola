@@ -79,7 +79,7 @@ function Content() {
 
             <CommonContent>
               Profesional con experiencia en tecnologías Front End (React, Vue,
-              JavaScript, HTML, CSS) y Back End (Node, Express).
+              JavaScript, HTML, CSS) y Back End (Node,Express,Php).
             </CommonContent>
             <CommonContent>
               También utilizo habitualmente Testing y TypeScript para garantizar

@@ -1,6 +1,24 @@
 @use './mixin.scss' as *;
-.header__title{
-    font-weight: 600;
+
+.container__main{
+  width: 100%;
+  height: 100%;
+}
+
+.icon__burguer{
+   border: none;
+   background-color: transparent;
+   width: 100%;
+   height: 30px;
+   max-height: 30px;
+}
+
+.icon__burguer-close{
+   border: none;
+   background-color: transparent;
+   width: 100%;
+   height: 20px;
+   max-height: 30px;
 }
 
 html {

@@ -181,7 +181,7 @@ export const CommonTitleV1 = styled.h1`
 export const CommonContent = styled.p`
   font-size: 18px;
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: 2rem;
   text-align: justify;
 `;
 
