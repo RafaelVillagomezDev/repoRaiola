@@ -1,4 +1,6 @@
 import React from "react";
+import { FaFileDownload } from "react-icons/fa";
+import { BsLaptop } from "react-icons/bs";
 import {
   ButtonTitle,
   ContentMain,
@@ -21,11 +23,13 @@ import {
   Separator,
   CommonTitleV1,
   IconCohete,
+  ContainerBtn,
+  CvButton,
 } from "./styles/Content";
 import Card from "../Card/Card";
 import { proyects } from "../../proyects";
 import Footer from "../Footer/Footer";
-
+import cv from "../../../public/assets/pdf/cv_yandry_villagomez.pdf";
 function Content() {
   const SkillsData = [
     {
@@ -64,11 +68,24 @@ function Content() {
               <PortadaTitle>Desarrollador Web</PortadaTitle>
               <PortadaImgMobile></PortadaImgMobile>
               <PortadaContent>
-                Un desarrollador web que construye el frontend de sitios y aplicaciones web que conducen al éxito.
+                Un desarrollador web que construye el frontend de sitios y
+                aplicaciones web que conducen al éxito.
               </PortadaContent>
-              <PortadaButton href="#container_proyect">
-                <ButtonTitle>PROYECTOS</ButtonTitle>
-              </PortadaButton>
+              <ContainerBtn>
+                <PortadaButton href="#container_proyect">
+                  <ButtonTitle>PROYECTOS <BsLaptop/></ButtonTitle>
+                </PortadaButton>
+                <CvButton
+                  href={cv}
+                  target="_blank"
+                  rel="cv"
+                  download="cv_yandry_rafael_villagomez.pdf"
+                >
+                  <ButtonTitle>
+                    CV <FaFileDownload />
+                  </ButtonTitle>
+                </CvButton>
+              </ContainerBtn>
             </PortadaBox>
             <PortadaImg></PortadaImg>
           </PortadaContainer>
@@ -83,8 +100,9 @@ function Content() {
             </CommonContent>
             <CommonContent>
               También utilizo habitualmente Testing y TypeScript para garantizar
-              la calidad de mi código . Soy una persona resolutiva, eficaz y dedicada a trabajar
-              para cumplir no solo mis objetivos sino los del equipo en el que trabaje.
+              la calidad de mi código . Soy una persona resolutiva, eficaz y
+              dedicada a trabajar para cumplir no solo mis objetivos sino los
+              del equipo en el que trabaje.
             </CommonContent>
           </AboutContent>
           <AboutSkills>

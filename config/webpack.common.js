@@ -32,6 +32,18 @@ module.exports = {
         },
       },
       {
+        test: /\.(pdf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'public/assets/pdf/',
+            },
+          },
+        ],
+      },
+      {
         test: /\.s?css$/, // archivos .css o .scss
         use: [
           { loader: "style-loader" },

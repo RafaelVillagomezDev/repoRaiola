@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import {styled,keyframes }from "styled-components";
 import { devices } from "../../../styles/mixin_styledComponent";
 
 
@@ -91,8 +91,35 @@ export const CardStats = styled.div`
   padding: 10px;
 `;
 
+// Definir la animación keyframe
+const agrandar = keyframes`
+  0% { font-size: 18px; }
+  0% { font-size: 20px; }
+  100% { font-size: 24px; }
+`;
+
 export const LinkText = styled.a`
   color: #fff;
   text-decoration: none;
+  display: inline-block;
+  transition: font-size 0.2s;
+  font-weight: bold;
+ 
+  &:hover {
+    color: orange;
+    animation: ${agrandar} 1s infinite alternate;
+  }
+  /* @media only screen and (${devices.xs}) {
+    font-size: 15px;
+  }
+  @media only screen and (${devices.sm}) {
+    font-size: 18px;
+  } */
 `;
 
+
+
+
+export const SpanLink=styled.span`
+  padding-right: 1rem;
+`

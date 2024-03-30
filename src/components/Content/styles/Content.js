@@ -118,19 +118,54 @@ export const PortadaContent = styled.p`
 `;
 
 export const PortadaButton = styled.a`
-  padding: 1.25em 5em;
+ 
   background-color: #4b538b;
   border-width: 2px;
   border-color: white;
   border-radius: 8em;
   margin-top: 1rem;
   text-decoration: none;
+
+  @media only screen and (${devices.xs}) {
+    padding: 1.25em 2rem;
+  }
+  @media only screen and (${devices.sm}) {
+    padding: 1.25em 5em;
+  }
 `;
+
+export const CvButton = styled.a`
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: orange;
+  border-width: 2px;
+  border-color: white;
+  border-radius: 8em;
+  margin-top: 1rem;
+  text-decoration: none;
+
+  @media only screen and (${devices.xs}) {
+    padding: 1.25em 2rem;
+  }
+  @media only screen and (${devices.sm}) {
+    padding: 1.25em 5em;
+  }
+`;
+
+export const ContainerBtn=styled.div`
+   display: flex;
+   justify-content: center;
+   gap: 1rem;
+`
 
 export const ButtonTitle = styled.span`
   font-size: 15px;
   font-weight: bold;
   color: white;
+  display:flex;
+  column-gap:0.5rem;
 `;
 export const SectionAbout = styled.div`
   display: flex;

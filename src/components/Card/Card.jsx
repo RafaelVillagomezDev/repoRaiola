@@ -1,6 +1,8 @@
 import React from "react";
 import { proyects } from "../../proyects";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { BsGithub } from "react-icons/bs";
+import { GiSpiderWeb } from "react-icons/gi";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -16,6 +18,7 @@ import {
   LinkText,
   CardStatWrapper,
   Separator,
+  SpanLink,
 } from "./styles/Card";
 
 // import required modules
@@ -66,7 +69,7 @@ function Card() {
             <CardWrapper key={slide.id} className="yandry">
               <CardImage background={slide.thumbnail} />
               <CardTextWrapper>
-                <CardTextDate>days ago {slide.id}</CardTextDate>
+                <CardTextDate>Proyecto #{slide.id}</CardTextDate>
                 <CardTextTitle></CardTextTitle>
                 <CardTextBody>
                   Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae
@@ -75,10 +78,14 @@ function Card() {
               </CardTextWrapper>
               <CardStatWrapper>
                 <CardStats>
-                  <LinkText href="#">website</LinkText>
+                  <LinkText href={slide.website}>
+                    <SpanLink>Website</SpanLink><GiSpiderWeb />
+                  </LinkText>
                 </CardStats>
                 <CardStats>
-                  <LinkText href="#">github</LinkText>
+                  <LinkText href={slide.linkGithub} target="_blank">
+                    <SpanLink>Github</SpanLink><BsGithub />
+                  </LinkText>
                 </CardStats>
               </CardStatWrapper>
             </CardWrapper>
