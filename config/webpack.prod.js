@@ -10,8 +10,7 @@ const prodConfig = {
   output: {
     filename: "[name].[contenthash].js",
     chunkFilename: "[name].[contenthash].chunk.js", // Nombre único para fragmentos
-    path: path.resolve(__dirname, "dist"),
-    publicPath: "/",
+    path: path.resolve(__dirname, "../dist"),
   },
   optimization: {
     splitChunks: {
