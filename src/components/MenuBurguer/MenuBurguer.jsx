@@ -89,13 +89,13 @@ function MenuBurguers() {
   return (
     <>
       <BtnTitle onClick={handleClose}>Yandry.dev</BtnTitle>
-      <BtnBurguer onClick={handleClose}>
-        <FaBars />
+      <BtnBurguer   onClick={handleClose}>
+        <FaBars  size={"18px"} />
       </BtnBurguer>
       <MenuBurguer isClicked={isClicked}>
         <HeaderMenuBurguer>
-          <BtnCloseMenu onClick={handleClose}>
-            <FaSkullCrossbones />
+          <BtnCloseMenu  onClick={handleClose}>
+            <FaSkullCrossbones size={"18px"} />
           </BtnCloseMenu>
         </HeaderMenuBurguer>
         <ContainerList>
