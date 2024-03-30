@@ -90,12 +90,12 @@ function MenuBurguers() {
     <>
       <BtnTitle onClick={handleClose}>Yandry.dev</BtnTitle>
       <BtnBurguer   onClick={handleClose}>
-        <FaBars  size={"18px"} />
+        <FaBars  style={{ color: 'black' }} size={"18px"} />
       </BtnBurguer>
       <MenuBurguer isClicked={isClicked}>
         <HeaderMenuBurguer>
           <BtnCloseMenu  onClick={handleClose}>
-            <FaSkullCrossbones size={"18px"} />
+            <FaSkullCrossbones style={{ color: 'black' }} size={"18px"} />
           </BtnCloseMenu>
         </HeaderMenuBurguer>
         <ContainerList>
