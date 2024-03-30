@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { TfiClose } from "react-icons/tfi";
 import { BsLaptop } from "react-icons/bs";
 import { FaFingerprint } from "react-icons/fa6";
-import { AiOutlineMenu } from "react-icons/ai";
+import { FaBars } from "react-icons/fa6";
+import { FaSkullCrossbones } from "react-icons/fa6";
 import {
   MenuBurguer,
   HeaderMenuBurguer,
@@ -14,17 +15,16 @@ import {
   LinkPersonalized,
   ContainerLink,
   BtnBurguer,
-  BtnTitle
+  BtnTitle,
 } from "./styles/menu";
 
-import logoHeader from "../../../public/assets/icons/logoHeader.png"
+import logoHeader from "../../../public/assets/icons/logoHeader.png";
 import gmail from "../../../public/assets/icons/gmail.png";
 import linkdn from "../../../public/assets/icons/linkedin.png";
 import whatsapp from "../../../public/assets/icons/whatsapp.png";
 
 function MenuBurguers() {
   const [isClicked, setIsClicked] = useState(false);
-  
 
   const handleClose = () => {
     setIsClicked(!isClicked);
@@ -88,16 +88,14 @@ function MenuBurguers() {
 
   return (
     <>
-    <BtnTitle onClick={handleClose}  >
-      Yandry.dev
-    </BtnTitle>
-      <BtnBurguer onClick={handleClose} >
-        <AiOutlineMenu className="icon__burguer" />
+      <BtnTitle onClick={handleClose}>Yandry.dev</BtnTitle>
+      <BtnBurguer onClick={handleClose}>
+        <FaBars />
       </BtnBurguer>
-      <MenuBurguer  isClicked={isClicked}>
+      <MenuBurguer isClicked={isClicked}>
         <HeaderMenuBurguer>
           <BtnCloseMenu onClick={handleClose}>
-            <TfiClose className="icon__burguer-close" />
+            <FaSkullCrossbones />
           </BtnCloseMenu>
         </HeaderMenuBurguer>
         <ContainerList>
