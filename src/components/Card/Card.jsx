@@ -69,16 +69,15 @@ function Card() {
             <CardWrapper key={slide.id} className="yandry">
               <CardImage background={slide.thumbnail} />
               <CardTextWrapper>
-                <CardTextDate>Proyecto #{slide.id}</CardTextDate>
+                <CardTextDate>{slide.title} #{slide.id}</CardTextDate>
                 <CardTextTitle></CardTextTitle>
                 <CardTextBody>
-                  Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae
-                  temporibus omnis illum maxime quod deserunt eligendi dolor
+                  {slide.description}
                 </CardTextBody>
               </CardTextWrapper>
               <CardStatWrapper>
                 <CardStats>
-                  <LinkText href={slide.website}>
+                  <LinkText href={slide.website} target="_blank">
                     <SpanLink>Website</SpanLink><GiSpiderWeb />
                   </LinkText>
                 </CardStats>

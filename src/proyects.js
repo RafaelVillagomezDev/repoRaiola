@@ -1,4 +1,4 @@
-import js from "../public/assets/img/fondo_1.jpg"
+import cloudDrop from "../public/assets/proyects/cloud_drop.png"
 import react from "../public/assets/img/fondo_1.jpg"
 import mysql from "../public/assets/img/fondo_1.jpg"
 
@@ -7,10 +7,11 @@ import mysql from "../public/assets/img/fondo_1.jpg"
 export const proyects = [
   {
     id: 1,
-    title: "Js",
-    thumbnail: js,
-    website:"https://www.google.es/",
-    linkGithub:"https://github.com/RafaelVillagomezDev"
+    title: "CloudDrop",
+    thumbnail: cloudDrop,
+    website:"https://rafaelvillagomezdev.github.io/clouDrop/",
+    linkGithub:"https://github.com/RafaelVillagomezDev/clouDrop",
+    description:"CloudDrop nace como proyecto de React usando Redux para manejar el estado . Se usa la api de Unplash , la aplicación cuenta con un buscador de fotos al igual que almacena en el localStorage tus fotos favoritas . Puedes eliminar dichas fotos al igual que descargarlas"
   },
   {
     id: 2,
@@ -18,12 +19,14 @@ export const proyects = [
     thumbnail: react,
     website:"https://www.google.es/",
     linkGithub:"https://github.com/RafaelVillagomezDev",
+    description:"CloudDrop nace como  proyecto de React usando Redux para manejar el estado . Se usa la api de Unplash , la aplicación cuenta con un buscador de fotos al igual que almacena en el localStorage tus fotos favoritas . Puedes eliminar dichas fotos al igual que descargarlas"
   },
   {
     id: 3,
     title: "mysql",
     thumbnail: mysql,
     website:"https://www.google.es/",
-    linkGithub:"https://github.com/RafaelVillagomezDev"
+    linkGithub:"https://github.com/RafaelVillagomezDev",
+    description:"CloudDrop nace como proyecto de React usando Redux para manejar el estado . Se usa la api de Unplash , la aplicación cuenta con un buscador de fotos al igual que almacena en el localStorage tus fotos favoritas . Puedes eliminar dichas fotos al igual que descargarlas"
   },
 ];
