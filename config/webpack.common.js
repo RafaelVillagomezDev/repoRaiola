@@ -9,6 +9,7 @@ module.exports = {
     filename: "main.bundle-[hash].js",
     clean: true,
   },
+  
 
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".html"],
