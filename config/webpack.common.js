@@ -4,10 +4,15 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 // Webpack configuration
 module.exports = {
   stats: { children: true },
+  watchOptions: {
+    aggregateTimeout: 200,
+    poll: 1000,
+  },
   output: {
     path: path.join(__dirname, "../dist"),
     filename: "main.bundle-[hash].js",
     clean: true,
+
   },
   
 

@@ -13,14 +13,15 @@ RUN npm install
 COPY . .
 # Build the app
 RUN npm run build
-## STAGE 2
-FROM nginx:alpine
-## Remove default nginx index page
-RUN rm -rf /usr/share/nginx/html/*
 
-ADD ./config/nginx.conf /etc/nginx/conf.d/nginx.conf
-COPY --from=build /app/dist /var/www/app/
-# Expose the port
-EXPOSE 3000
+# ## STAGE 2
+# FROM nginx:alpine
+# ## Remove default nginx index page
+# RUN rm -rf /usr/share/nginx/html/*"
+
+# ADD ./config/nginx.conf /etc/nginx/conf.d/nginx.conf
+# COPY --from=build /app/dist /var/www/app/
+# # Expose the port
+# EXPOSE 3000
 # Run the app
-CMD ["nginx","-g","daemon off;"]
+CMD ["npm","run","start"]
