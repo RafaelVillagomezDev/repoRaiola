@@ -229,10 +229,12 @@ export const ContentSkill = styled.div`
 export const BoxSkill = styled.div`
   border-radius: 2px;
   text-align: center;
-  padding: 0.25rem 1rem;
-  border-radius: 12px;
+  padding: 1rem 1rem;
+  border-radius: 360px;
   gap: 1rem;
   background-color: orange;
+  font-weight: 600;
+  color:white;
 `;
 
 export const CardContainer = styled.div`

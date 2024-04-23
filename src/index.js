@@ -1,15 +1,16 @@
-import React from "react";
+import React, { lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import "./format.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Main from "./pages/main/Main";
-import ErrorPage from "./pages/error/error-page";
+
+const Main=lazy(()=>import("./pages/main/Main"))
+const ErrorPage=lazy(()=>import("./pages/error/error-page"))
 
 const router = createBrowserRouter([
   {
     path: "/porfolio",
-    element: <Main />,
+    element: <Main/>,
     errorElement: <ErrorPage />,
   },
   {

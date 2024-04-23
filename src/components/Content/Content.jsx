@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy } from "react";
 import { FaFileDownload } from "react-icons/fa";
 import { BsLaptop } from "react-icons/bs";
 import {
@@ -26,10 +26,13 @@ import {
   ContainerBtn,
   CvButton,
 } from "./styles/Content";
-import Card from "../Card/Card";
-import { proyects } from "../../proyects";
-import Footer from "../Footer/Footer";
+
+
 import cv from "../../../public/assets/pdf/cv_yandry_villagomez.pdf";
+
+const Card=lazy(()=>import("../Card/Card"));
+const Footer=lazy(()=>import("../Footer/Footer"))
+
 function Content() {
   const SkillsData = [
     {
@@ -112,7 +115,7 @@ function Content() {
         </SectionAbout>
         <CardContainer id="container_proyect">
           <CommonTitleV1>Proyectos </CommonTitleV1>
-          <Card id="card_content" />
+          <Card id="card-content"/>
         </CardContainer>
       </ContentMain>
 
