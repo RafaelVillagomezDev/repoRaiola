@@ -8,28 +8,18 @@ export const Portada = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  
+
   @media only screen and (${devices.xs}) {
     height: 500px;
   }
   @media only screen and (${devices.sm}) {
     height: 680px;
   }
-
 `;
 
 export const ContentMain = styled.div`
   height: 100%;
-  margin: 2rem 8rem;
-  @media only screen and (${devices.xs}) {
-    margin: 2rem 2rem;
-  }
-  @media only screen and (${devices.md}) {
-    margin: 2rem 2rem;
-  }
-  @media only screen and (${devices.lg}) {
-    margin: 2rem 4rem;
-  }
+  margin: 2rem;
 `;
 
 export const PortadaContainer = styled.div`
@@ -39,11 +29,9 @@ export const PortadaContainer = styled.div`
   align-items: center;
   gap: 6rem;
 
-
   @media only screen and (${devices.xs}) {
     width: 100%;
   }
- 
 `;
 
 export const PortadaBox = styled.div`
@@ -56,24 +44,20 @@ export const PortadaBox = styled.div`
 
 export const PortadaImg = styled.div`
   background-image: url(${portadaImg});
-  width:100% ;
+  width: 100%;
   height: 500px;
   min-height: 500px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 120px 360px;
- 
+
   @media only screen and (${devices.xs}) {
     display: none;
   }
   @media only screen and (${devices.sm}) {
     display: block;
-    
   }
-
-
-  
 `;
 
 export const PortadaImgMobile = styled.img`
@@ -82,7 +66,7 @@ export const PortadaImgMobile = styled.img`
   width: 150px;
   height: 150px;
   background-repeat: no-repeat;
-  background-position:center;
+  background-position: center;
   background-size: cover;
   margin: 1rem;
   @media only screen and (${devices.xs}) {
@@ -118,7 +102,6 @@ export const PortadaContent = styled.p`
 `;
 
 export const PortadaButton = styled.a`
- 
   background-color: #4b538b;
   border-width: 2px;
   border-color: white;
@@ -135,7 +118,7 @@ export const PortadaButton = styled.a`
 `;
 
 export const CvButton = styled.a`
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -154,41 +137,56 @@ export const CvButton = styled.a`
   }
 `;
 
-export const ContainerBtn=styled.div`
-   display: flex;
-   justify-content: center;
-   gap: 1rem;
-`
+export const ContainerBtn = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+`;
 
 export const ButtonTitle = styled.span`
   font-size: 15px;
   font-weight: bold;
   color: white;
-  display:flex;
-  column-gap:0.5rem;
+  display: flex;
+  column-gap: 0.5rem;
 `;
 export const SectionAbout = styled.div`
   display: flex;
   gap: 2rem;
+
   @media only screen and (${devices.xs}) {
     flex-direction: column;
+    padding: 0rem;
   }
   @media only screen and (${devices.sm}) {
     flex-direction: row;
+    padding: 2rem 2rem;
   }
-
 `;
 export const AboutContent = styled.div`
-  padding: 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 export const AboutSkills = styled.div`
-  padding: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @media only screen and (${devices.xs}) {
+    padding: 2rem 0rem;
+  }
+  @media only screen and (${devices.sm}) {
+    padding: 2rem 2rem;
+  }
 `;
 
 export const CommonTitle = styled.h1`
   font-size: 25px;
   font-weight: bold;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   @media only screen and (${devices.sm}) {
     font-size: 30px;
   }
@@ -198,11 +196,10 @@ export const CommonTitleV1 = styled.h1`
   font-size: 25px;
   font-weight: bold;
   padding-bottom: 1rem;
-  
+
   @media only screen and (${devices.xs}) {
     font-size: 25px;
-    text-align:start;
-    
+    text-align: start;
   }
 
   @media only screen and (${devices.sm}) {
@@ -211,19 +208,33 @@ export const CommonTitleV1 = styled.h1`
   }
 `;
 
-
-
 export const CommonContent = styled.p`
   font-size: 18px;
   font-weight: 400;
   line-height: 2rem;
-  text-align: justify;
+
+  @media only screen and (${devices.xs}) {
+    font-size: 18px;
+  }
+  @media only screen and (${devices.sm}) {
+    font-size: 18px;
+    text-align: center;
+    text-align: center;
+    word-break: keep-all;
+  }
 `;
 
 export const ContentSkill = styled.div`
   flex-wrap: wrap;
   display: flex;
-  gap: 2rem;
+  padding-top: 1rem;
+
+  @media only screen and (${devices.xs}) {
+    gap: 1rem;
+  }
+  @media only screen and (${devices.sm}) {
+    gap: 2rem;
+  }
 `;
 
 export const BoxSkill = styled.div`
@@ -234,7 +245,7 @@ export const BoxSkill = styled.div`
   gap: 1rem;
   background-color: orange;
   font-weight: 600;
-  color:white;
+  color: white;
 `;
 
 export const CardContainer = styled.div`
@@ -244,6 +255,4 @@ export const CardContainer = styled.div`
   @media only screen and (${devices.md}) {
     flex-direction: column;
   }
- 
 `;
-

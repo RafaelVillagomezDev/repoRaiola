@@ -98,7 +98,7 @@ function Content() {
             <CommonTitle>Conóceme</CommonTitle>
 
             <CommonContent>
-              Profesional con experiencia en tecnologías Front End (React, Vue,
+              Profesional con experiencia y conocimientos en diferencias tecnologías Front End (React, Vue,
               JavaScript, HTML, CSS) y Back End (Node,Express,Php).
             </CommonContent>
             <CommonContent>
@@ -108,11 +108,12 @@ function Content() {
               del equipo en el que trabaje.
             </CommonContent>
           </AboutContent>
-          <AboutSkills>
+         
+        </SectionAbout>
+        <AboutSkills>
             <CommonTitle>Skills</CommonTitle>
             <ContentSkill>{elemSkill}</ContentSkill>
-          </AboutSkills>
-        </SectionAbout>
+          </AboutSkills> 
         <CardContainer id="container_proyect">
           <CommonTitleV1>Proyectos </CommonTitleV1>
           <Card id="card-content"/>
