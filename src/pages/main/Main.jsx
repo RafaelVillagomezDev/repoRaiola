@@ -6,7 +6,6 @@ const Content=lazy(()=>import("../../components/Content/Content"))
 function Main() {
   return (
     <>
-
         <Header />
         <Content />
     </>
