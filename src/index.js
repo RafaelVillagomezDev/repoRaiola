@@ -9,17 +9,14 @@ const ErrorPage=lazy(()=>import("./pages/error/error-page"))
 
 const router = createBrowserRouter([
   {
-    path: "/porfolio",
+    path: "/",
     element: <Main/>,
     errorElement: <ErrorPage />,
   },
   {
     path: "/home",
     element: <Main/>,
-  },
-  {
-    path: "/",
-    element: <Main/>,
+    errorElement: <ErrorPage />,
   },
 ]);
 
