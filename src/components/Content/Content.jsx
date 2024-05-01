@@ -106,6 +106,7 @@ function Content() {
               la calidad de mi código . Soy una persona resolutiva, eficaz y
               dedicada a trabajar para cumplir no solo mis objetivos sino los
               del equipo en el que trabaje 
+              
             </CommonContent>
           </AboutContent>
          
