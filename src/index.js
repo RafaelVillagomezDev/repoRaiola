@@ -1,6 +1,7 @@
 import React, { lazy } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import "./normalize.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const Main=lazy(()=>import("./pages/main/Main"))
