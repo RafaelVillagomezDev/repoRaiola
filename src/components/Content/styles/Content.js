@@ -79,6 +79,7 @@ export const PortadaImgMobile = styled.img`
 
 export const PortadaTitleName = styled.span`
   color: #47d16e;
+  
 `;
 export const PortadaTitle = styled.p`
   text-align: center;
