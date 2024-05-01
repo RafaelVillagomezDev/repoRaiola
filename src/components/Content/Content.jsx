@@ -25,10 +25,12 @@ import {
   IconCohete,
   ContainerBtn,
   CvButton,
+  PortadaTitleName,
 } from "./styles/Content";
 
 
 import cv from "../../../public/assets/pdf/cv_yandry_villagomez.pdf";
+import CardAbout from "../CardAbout/CardAbout";
 
 const Card=lazy(()=>import("../Card/Card"));
 const Footer=lazy(()=>import("../Footer/Footer"))
@@ -68,6 +70,9 @@ function Content() {
         <Portada>
           <PortadaContainer>
             <PortadaBox>
+              <PortadaTitle>
+                Soy <PortadaTitleName>Yandry Villa</PortadaTitleName>
+              </PortadaTitle>
               <PortadaTitle>Desarrollador Web</PortadaTitle>
               <PortadaImgMobile></PortadaImgMobile>
               <PortadaContent>
@@ -76,7 +81,7 @@ function Content() {
               </PortadaContent>
               <ContainerBtn>
                 <PortadaButton href="#container_proyect">
-                  <ButtonTitle>PROYECTOS <BsLaptop/></ButtonTitle>
+                  <ButtonTitle>Proyectos<BsLaptop/></ButtonTitle>
                 </PortadaButton>
                 <CvButton
                   href={cv}
@@ -85,43 +90,15 @@ function Content() {
                   download="cv_yandry_rafael_villagomez.pdf"
                 >
                   <ButtonTitle>
-                    CV <FaFileDownload />
+                    Descargar CV <FaFileDownload />
                   </ButtonTitle>
                 </CvButton>
               </ContainerBtn>
             </PortadaBox>
-            <PortadaImg></PortadaImg>
           </PortadaContainer>
         </Portada>
-        <SectionAbout>
-          <AboutContent>
-            <CommonTitle>Conóceme</CommonTitle>
-
-            <CommonContent>
-              Profesional con experiencia y conocimientos en diferencias tecnologías Front End (React, Vue,
-              JavaScript, HTML, CSS) y Back End (Node,Express,Php).
-            </CommonContent>
-            <CommonContent>
-              También utilizo habitualmente Testing y TypeScript para garantizar
-              la calidad de mi código . Soy una persona resolutiva, eficaz y
-              dedicada a trabajar para cumplir no solo mis objetivos sino los
-              del equipo en el que trabaje  
-
-            </CommonContent>
-          </AboutContent>
-         
-        </SectionAbout>
-        <AboutSkills>
-            <CommonTitle>Skills</CommonTitle>
-            <ContentSkill>{elemSkill}</ContentSkill>
-          </AboutSkills> 
-        <CardContainer id="container_proyect">
-          <CommonTitleV1>Proyectos </CommonTitleV1>
-          <Card id="card-content"/>
-        </CardContainer>
+        <CardAbout/>
       </ContentMain>
-
-      <Footer />
     </>
   );
 }

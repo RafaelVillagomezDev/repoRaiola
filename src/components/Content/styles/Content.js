@@ -77,12 +77,17 @@ export const PortadaImgMobile = styled.img`
   }
 `;
 
-export const PortadaTitle = styled.h1`
-  font-size: 70px;
-  font-weight: bold;
-  padding-bottom: 18px;
-  color: orange;
-  -webkit-text-stroke: 1px black;
+export const PortadaTitleName = styled.span`
+  color: #47d16e;
+`;
+export const PortadaTitle = styled.p`
+  text-align: center;
+  font-family: "DM Sans";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 71px; /* 118.333% */
+  letter-spacing: -0.5px;
   @media only screen and (${devices.xs}) {
     font-size: 35px;
     padding-bottom: 14px;
@@ -96,19 +101,29 @@ export const PortadaTitle = styled.h1`
   }
 `;
 export const PortadaContent = styled.p`
-  font-size: 18px;
-  line-height: 23px;
-  padding-bottom: 12px;
+  text-align: center;
+  width: 446px;
+  height: 117px;
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 120% */
+  letter-spacing: 0.15px;
 `;
 
 export const PortadaButton = styled.a`
-  background-color: #4b538b;
+  background-color: #009d5c;
   border-width: 2px;
   border-color: white;
-  border-radius: 8em;
+  border-radius: 1em;
   margin-top: 1rem;
   text-decoration: none;
-
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 100% */
   @media only screen and (${devices.xs}) {
     padding: 1.25em 2rem;
   }
@@ -122,10 +137,11 @@ export const CvButton = styled.a`
   justify-content: center;
   align-items: center;
   align-content: center;
-  background-color: orange;
+  background-color: transparent;
+  border: solid 2px  #3D3D3D;
   border-width: 2px;
   border-color: white;
-  border-radius: 8em;
+  border-radius: 1em;
   margin-top: 1rem;
   text-decoration: none;
 

@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 export const BtnTitle=styled.button`
   background-color: transparent;
   border: none;
-  font-size: 30px;
+  font-size: 24px;
   color: whitesmoke;
   font-weight: bold;
   cursor: pointer;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:"Poppins",sans-serif;
   @media only screen and (${devices.xs}) {
     display: none;
   }
@@ -149,7 +149,7 @@ export const LinkPersonalized = styled(Link)`
   color: white;
   width: 28px;
   height: 28px;
-
+  
   content: url(${(props) => props.contentUrl});
   &:hover {
     color: red;

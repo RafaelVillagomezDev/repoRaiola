@@ -2,19 +2,17 @@ import styled from "styled-components";
 import { devices } from "../../../styles/mixin_styledComponent";
 import { Link } from "react-router-dom";
 
-
-
-
 export const HeaderContainer = styled.div`
   font-size: 1.5em;
   text-align: center;
-  background-color: #4b538b;
+  background-color: #171718;
+  backdrop-filter: blur(40px);
   height: 90px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 `;
 
 export const ContainerElement = styled.div`
@@ -25,32 +23,56 @@ export const ContainerElement = styled.div`
 
 export const NavPersonalized = styled.div`
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   gap: 1.75rem;
-   @media only screen and (${devices.xs}) {
+  @media only screen and (${devices.xs}) {
     gap: 0.75rem;
   }
   @media only screen and (${devices.sm}) {
-    gap:1.75rem;
+    gap: 1.75rem;
   }
 `;
-
-
-
-
 
 export const LinkPersonalized = styled(Link)`
+  font-family: "DM Sans", sans-serif;
   text-decoration: none;
-  color: white;
-  width: 28px;
-  height: 28px;
-  content: url(${props =>(props.contentUrl)});
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  @media only screen and (${devices.xs}) {
+    display: none;
+  }
+  @media only screen and (${devices.sm}) {
+    display: block;
+  }
   &:hover {
-    color: red;
+    border-bottom: solid 3px #47d16e;
   }
 `;
 
+/*Button contact */
 
+export const ButtonContact = styled.div`
+  display: flex;
+  padding: 16px 35px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #009d5c;
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 16px;
+  @media only screen and (${devices.xs}) {
+    display: none;
+  }
+  @media only screen and (${devices.sm}) {
+    display: block;
+  }
+`;
 
 /*Toggle */
 

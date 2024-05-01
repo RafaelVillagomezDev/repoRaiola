@@ -7,7 +7,7 @@ function Main() {
   return (
     <>
         <Header />
-        <Content />
+         <Content /> 
     </>
   );
 }

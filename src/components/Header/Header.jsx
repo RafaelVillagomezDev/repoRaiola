@@ -10,6 +10,7 @@ import {
   NavPersonalized,
   HeaderTitle,
   BtnBurguer,
+  ButtonContact,
 } from "./styles/header";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../globalStyles";
@@ -33,16 +34,19 @@ function Header() {
   const LinkData = [
     {
       id: 1,
+      name:"Inicio",
       enlace: "mailto:yandry75@gmail.com?Subject=Oferta%20de%20trabajo%20",
       contentUrl: gmail,
     },
     {
       id: 2,
+      name:"Acerca de mi",
       enlace: "https://www.linkedin.com/in/rafaelvillagomez/",
       contentUrl: linkdn,
     },
     {
       id: 3,
+      name:"Proyectos",
       enlace:
         "https://wa.me/618152241?text=Hola%20Yandry%20me%20gustaria%20hablar%20de%20trabajo%20",
       contentUrl: whatsapp,
@@ -54,9 +58,8 @@ function Header() {
       <LinkPersonalized
         to={element.enlace}
         key={element.id}
-        contentUrl={element.contentUrl}
       >
-        {element.contentUrl}
+        {element.name}
       </LinkPersonalized>
     );
   });
@@ -70,10 +73,11 @@ function Header() {
           <MenuBurguers/>
         </ContainerElement>
 
-        <NavPersonalized></NavPersonalized>
-
+        <NavPersonalized>
+          {elemLink}
+        </NavPersonalized>
         <ContainerElement>
-          <Label>
+        <Label>
             <Input
               checked={checked}
               onClick={themeToggler}
@@ -82,6 +86,8 @@ function Header() {
             />
             <Switch />
           </Label>
+          <ButtonContact>Contactame</ButtonContact>
+          
         </ContainerElement>
       </HeaderContainer>
      

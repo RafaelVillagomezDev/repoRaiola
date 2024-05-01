@@ -1,14 +1,12 @@
 export const lightTheme = {
-    body: '#FFF',
-    text: 'black',
+    body:"radial-gradient(circle, rgba(45,79,55,1) 0%, rgba(23,23,24,1) 43%);",
+    text: '#FAFAFA',
     toggleBorder: '#FFF',
-    background: '#343838',
-
 }
 export const darkTheme = {
-    body: '#010300',
-    text: 'white',
-    toggleBorder: '#6B8096',
-    background: '#343838',
+    body: 'white',
+    text: '#171718',
+    toggleBorder: '#171718',
+    
     
 }
