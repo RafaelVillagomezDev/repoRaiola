@@ -34,19 +34,19 @@ function Header() {
   const LinkData = [
     {
       id: 1,
-      name:"Inicio",
+      name: "Inicio",
       enlace: "mailto:yandry75@gmail.com?Subject=Oferta%20de%20trabajo%20",
       contentUrl: gmail,
     },
     {
       id: 2,
-      name:"Acerca de mi",
+      name: "Acerca de mi",
       enlace: "https://www.linkedin.com/in/rafaelvillagomez/",
       contentUrl: linkdn,
     },
     {
       id: 3,
-      name:"Proyectos",
+      name: "Proyectos",
       enlace:
         "https://wa.me/618152241?text=Hola%20Yandry%20me%20gustaria%20hablar%20de%20trabajo%20",
       contentUrl: whatsapp,
@@ -55,10 +55,7 @@ function Header() {
 
   const elemLink = LinkData.map((element) => {
     return (
-      <LinkPersonalized
-        to={element.enlace}
-        key={element.id}
-      >
+      <LinkPersonalized to={element.enlace} key={element.id}>
         {element.name}
       </LinkPersonalized>
     );
@@ -69,15 +66,12 @@ function Header() {
       <GlobalStyles />
       <HeaderContainer>
         <ContainerElement>
-          
-          <MenuBurguers/>
+          <MenuBurguers />
         </ContainerElement>
 
-        <NavPersonalized>
-          {elemLink}
-        </NavPersonalized>
+        <NavPersonalized>{elemLink}</NavPersonalized>
         <ContainerElement>
-        <Label>
+          <Label>
             <Input
               checked={checked}
               onClick={themeToggler}
@@ -87,10 +81,8 @@ function Header() {
             <Switch />
           </Label>
           <ButtonContact>Contactame</ButtonContact>
-          
         </ContainerElement>
       </HeaderContainer>
-     
     </ThemeProvider>
   );
 }

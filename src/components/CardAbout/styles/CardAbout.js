@@ -69,7 +69,6 @@ export const CardAboutText = styled.p`
 export const CardButton = styled.div`
   display: flex;
   padding: 16px 20px;
-  width: 100%;
   max-width: 205px;
   justify-content: center;
   align-items: center;
