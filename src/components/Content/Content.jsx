@@ -31,6 +31,7 @@ import {
 
 import cv from "../../../public/assets/pdf/cv_yandry_villagomez.pdf";
 import CardAbout from "../CardAbout/CardAbout";
+import Skills from "../Skills/Skills";
 
 const Card=lazy(()=>import("../Card/Card"));
 const Footer=lazy(()=>import("../Footer/Footer"))
@@ -74,9 +75,8 @@ function Content() {
                 Soy <PortadaTitleName>Yandry Villa</PortadaTitleName>
               </PortadaTitle>
               <PortadaTitle>Desarrollador Web</PortadaTitle>
-              <PortadaImgMobile></PortadaImgMobile>
               <PortadaContent>
-                Un desarrollador web que construye el frontend de sitios y
+                Un desarrollador web que construye el frontend y backend de sitios y
                 aplicaciones web que conducen al éxito.
               </PortadaContent>
               <ContainerBtn>
@@ -90,7 +90,7 @@ function Content() {
                   download="cv_yandry_rafael_villagomez.pdf"
                 >
                   <ButtonTitle>
-                    Descargar CV <FaFileDownload />
+                   CV <FaFileDownload />
                   </ButtonTitle>
                 </CvButton>
               </ContainerBtn>
@@ -98,6 +98,7 @@ function Content() {
           </PortadaContainer>
         </Portada>
         <CardAbout/>
+        <Skills/>
       </ContentMain>
     </>
   );

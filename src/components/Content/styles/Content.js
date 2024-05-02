@@ -91,7 +91,6 @@ export const PortadaTitle = styled.p`
   letter-spacing: -0.5px;
   @media only screen and (${devices.xs}) {
     font-size: 35px;
-    padding-bottom: 14px;
   }
   @media only screen and (${devices.sm}) {
     font-size: 65px;
@@ -103,7 +102,8 @@ export const PortadaTitle = styled.p`
 `;
 export const PortadaContent = styled.p`
   text-align: center;
-  width: 446px;
+  max-width: 446px;
+  width: 100%;
   height: 117px;
   font-family: "DM Sans";
   font-size: 20px;
@@ -111,6 +111,8 @@ export const PortadaContent = styled.p`
   font-weight: 500;
   line-height: 24px; /* 120% */
   letter-spacing: 0.15px;
+  display: flex;
+  align-items: center;
 `;
 
 export const PortadaButton = styled.a`
@@ -125,8 +127,12 @@ export const PortadaButton = styled.a`
   font-style: normal;
   font-weight: 500;
   line-height: 16px; /* 100% */
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: ce;
   @media only screen and (${devices.xs}) {
-    padding: 1.25em 2rem;
+    padding: 1.25em 1.5rem;
   }
   @media only screen and (${devices.sm}) {
     padding: 1.25em 5em;

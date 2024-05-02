@@ -9,38 +9,51 @@ export const CardAboutContainer = styled.div`
 
 export const CardAboutBox = styled.div`
   display: flex;
-  width: 967px;
-  height: 405px;
   align-items: flex-start;
   gap: 32px;
+  width: 100%;
   border-radius: 8px;
   border: 1.5px solid #3d3d3d;
   background: #1f1f21;
   padding: 1rem;
+  @media only screen and (${devices.xs}) {
+    flex-direction: column;
+    max-width: 967px;
+    height: 100%;
+    align-items: center;
+  }
+  @media only screen and (${devices.sm}) {
+    flex-direction: row;
+  }
 `;
 
 export const CardAboutLeft = styled.div`
-  width: 326.325px;
-  height: 405.162px;
-  
+  display: flex;
+  @media only screen and (${devices.xs}) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  @media only screen and (${devices.sm}) {
+    flex-direction: row;
+  }
 `;
 
 export const CardAboutRight = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-
+  gap: 1rem;
   width: 100%;
   height: 100%;
 `;
 
-export const CardAboutTitle = styled.h5`
+export const CardAboutTitle = styled.p`
   color: #47d16e;
   font-family: "DM Sans", sans-serif;
   font-size: 35px;
   font-style: normal;
   font-weight: 500;
-  line-height: 57px; /* 118.75% */
 `;
 
 export const CardAboutText = styled.p`
@@ -60,7 +73,7 @@ export const CardButton = styled.div`
   max-width: 205px;
   justify-content: center;
   align-items: center;
-  border: 2px solid #3D3D3D;
+  border: 2px solid #3d3d3d;
   border-radius: 8px;
   background-color: transparent;
 `;
