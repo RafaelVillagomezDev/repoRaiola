@@ -4,6 +4,7 @@ import { BsLaptop } from "react-icons/bs";
 import { FaFingerprint } from "react-icons/fa6";
 import { FaBars } from "react-icons/fa6";
 import { FaSkullCrossbones } from "react-icons/fa6";
+import { IoHomeOutline } from "react-icons/io5";
 import {
   MenuBurguer,
   HeaderMenuBurguer,
@@ -23,28 +24,31 @@ import gmail from "../../../public/assets/icons/gmail.png";
 import linkdn from "../../../public/assets/icons/linkedin.png";
 import whatsapp from "../../../public/assets/icons/whatsapp.png";
 
-function MenuBurguers() {
-  const [isClicked, setIsClicked] = useState(false);
-
-  const handleClose = () => {
-    setIsClicked(!isClicked);
-  };
-
+function MenuBurguers(props) {
+  
   const LinkData = [
     {
       id: 1,
+      enlace: "https://www.linkedin.com/in/rafaelvillagomez/",
+      name: "Inicio",
+      icon: <IoHomeOutline />,
+    },
+    {
+      id: 2,
       enlace: "https://www.linkedin.com/in/rafaelvillagomez/",
       name: "Acerca de mi",
       icon: <FaFingerprint />,
     },
     {
-      id: 2,
+      id: 3,
       enlace: "#",
       name: "Proyectos",
       icon: <BsLaptop />,
     },
   ];
 
+ 
+ 
   const ElemLink = LinkData.map((element) => {
     return (
       <List>
@@ -88,14 +92,10 @@ function MenuBurguers() {
 
   return (
     <>
-      <BtnTitle onClick={handleClose}>Yandry.dev</BtnTitle>
-      <BtnBurguer   onClick={handleClose}>
-        <FaBars  style={{ color: 'black' }} size={"18px"} />
-      </BtnBurguer>
-      <MenuBurguer isClicked={isClicked}>
+      <MenuBurguer isClicked={props.isClicked}>
         <HeaderMenuBurguer>
-          <BtnCloseMenu  onClick={handleClose}>
-            <FaSkullCrossbones style={{ color: 'black' }} size={"18px"} />
+          <BtnCloseMenu  onClick={props.handleClose}>
+            <FaSkullCrossbones style={{ color: "#FFF" }} size={"18px"} />
           </BtnCloseMenu>
         </HeaderMenuBurguer>
         <ContainerList>

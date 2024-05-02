@@ -9,9 +9,10 @@ import {
   LinkPersonalized,
   NavPersonalized,
   HeaderTitle,
-  BtnBurguer,
   ButtonContact,
 } from "./styles/header";
+
+import { BtnBurguer} from "../MenuBurguer/styles/menu"
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../globalStyles";
 import { lightTheme, darkTheme } from "../Theme";
@@ -19,6 +20,8 @@ import gmail from "../../../public/assets/icons/gmail.png";
 import linkdn from "../../../public/assets/icons/linkedin.png";
 import whatsapp from "../../../public/assets/icons/whatsapp.png";
 import MenuBurguers from "../MenuBurguer/MenuBurguer";
+import { BtnTitle } from "../MenuBurguer/styles/menu";
+import { FaBars } from "react-icons/fa6";
 
 function Header() {
   const [theme, setTheme] = useState("light");
@@ -27,6 +30,12 @@ function Header() {
   };
 
   const [checked, setChecked] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClose = () => {
+    setIsClicked(!isClicked);
+    console.log(isClicked);
+  };
 
   const handleChange = (e) => {
     setChecked(e.target.checked);
@@ -66,7 +75,10 @@ function Header() {
       <GlobalStyles />
       <HeaderContainer>
         <ContainerElement>
-          <MenuBurguers />
+          <BtnTitle onClick={handleClose}>Yandry.dev</BtnTitle>
+          <BtnBurguer onClick={handleClose}>
+            <FaBars style={{ color: "#FFF" }} size={"18px"} />
+          </BtnBurguer>
         </ContainerElement>
 
         <NavPersonalized>{elemLink}</NavPersonalized>
@@ -83,6 +95,7 @@ function Header() {
           <ButtonContact>Contactame</ButtonContact>
         </ContainerElement>
       </HeaderContainer>
+      <MenuBurguers isClicked={isClicked} handleClose={handleClose} />
     </ThemeProvider>
   );
 }

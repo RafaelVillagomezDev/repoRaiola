@@ -61,7 +61,7 @@ export const MenuBurguer = styled.div`
   left: ${({ isClicked }) => (isClicked ? '0' : '-100%')};
   position: fixed;
   height: 100%;
-  background-color: white;
+  background-color: #171718;
   z-index: 2;
   padding: 15px;
   transition: left 0.5s ease;
@@ -74,7 +74,7 @@ export const MenuBurguer = styled.div`
   }
 
   @media only screen and (${devices.lg}) {
-     width:20%;
+     width:22%;
   }
  
 `;
@@ -111,14 +111,15 @@ export const List = styled.li`
 
 export const LinkList = styled(Link)`
   text-decoration: none;
-  color: black;
+  color: #FFF;
   font-weight: bold;
+  font-family: "Poppins",sans-serif;
   display: flex;
   gap: 0.3rem;
   align-items: center;
   align-content: center;
   &:hover {
-    color: orange;
+     border-bottom: 2px solid #47d16e;
   }
 
   @media only screen and (${devices.xs}) {

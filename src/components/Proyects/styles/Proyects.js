@@ -4,7 +4,13 @@ import { devices } from "../../../styles/mixin_styledComponent";
 
 export const ProyectContainer = styled.div`
   width: 100%;
-  margin: 176px 0px;
+  
+  @media only screen and (${devices.xs}) {
+    margin: 80px 0px;
+  }
+  @media only screen and (${devices.sm}) {
+    margin: 176px 0px;
+  }
 `;
 
 export const ProyectTitle = styled.h3`

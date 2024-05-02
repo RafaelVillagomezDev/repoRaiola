@@ -75,4 +75,5 @@ export const CardButton = styled.div`
   border: 2px solid #3d3d3d;
   border-radius: 8px;
   background-color: transparent;
+  color: #FAFAFA;
 `;

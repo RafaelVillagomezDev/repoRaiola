@@ -79,7 +79,6 @@ export const PortadaImgMobile = styled.img`
 
 export const PortadaTitleName = styled.span`
   color: #47d16e;
-  
 `;
 export const PortadaTitle = styled.p`
   text-align: center;
@@ -127,7 +126,7 @@ export const PortadaButton = styled.a`
   font-style: normal;
   font-weight: 500;
   line-height: 16px; /* 100% */
-  display:flex;
+  display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: ce;
@@ -145,13 +144,12 @@ export const CvButton = styled.a`
   align-items: center;
   align-content: center;
   background-color: transparent;
-  border: solid 2px  #3D3D3D;
+  border: solid 2px #3d3d3d;
   border-width: 2px;
-  border-color: white;
   border-radius: 1em;
   margin-top: 1rem;
   text-decoration: none;
-
+  color: #009d5c;
   @media only screen and (${devices.xs}) {
     padding: 1.25em 2rem;
   }
@@ -169,7 +167,6 @@ export const ContainerBtn = styled.div`
 export const ButtonTitle = styled.span`
   font-size: 15px;
   font-weight: bold;
-  color: white;
   display: flex;
   column-gap: 0.5rem;
 `;
