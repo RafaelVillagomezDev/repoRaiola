@@ -1,8 +1,11 @@
 import React from "react";
 import {
+  FooterColumn,
   FooterComponent,
   FooterContainer,
+  FooterText,
   FooterTitle,
+  FooterTitleNav,
   LinkContainer,
   LinkTel,
 } from "./styles/Footer";
@@ -45,9 +48,23 @@ function Footer() {
     <>
       <FooterComponent>
         <FooterContainer>
-          <FooterTitle>© yandry.dev | Desarrollador Web </FooterTitle>
-          
-          <LinkContainer>{elemLink}</LinkContainer>
+          <FooterColumn>
+            <FooterTitle>YandryDev</FooterTitle>
+          </FooterColumn>
+          <FooterColumn>
+            <FooterTitleNav>Inicio</FooterTitleNav>
+            <FooterText target="_blank" >Acerca de mi</FooterText>
+            <FooterText target="_blank" >Proyectos</FooterText>
+          </FooterColumn>
+          <FooterColumn>
+            <FooterTitleNav>Contáctame</FooterTitleNav>
+            <FooterText  target="_blank" to="mailto:yandry75@gmail.com?Subject=Oferta%20de%20trabajo%20">Correo</FooterText>
+            <FooterText  target="_blank" to="https://www.linkedin.com/in/rafaelvillagomez/">Linkdn</FooterText>
+          </FooterColumn>
+          <FooterColumn>
+            <FooterTitleNav>Social</FooterTitleNav>
+            
+          </FooterColumn>
         </FooterContainer>
       </FooterComponent>
     </>

@@ -2,51 +2,74 @@ import styled from "styled-components";
 import { devices } from "../../../styles/mixin_styledComponent";
 import { Link } from "react-router-dom";
 export const FooterComponent = styled.div`
-  width: 100%;
-  height: 80px;
-  background-color: #4b538b;
-  z-index: 2;
-  bottom: 0px;
-  left: 0;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  
+  display: flex;
   flex-direction: column;
-  @media only screen and (${devices.xs}) {
-    height: 60px;
-  }
-  @media only screen and (${devices.sm}) {
-    height: 60px;
-    padding: 15px 0px;
-  }
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  background-color: #131414;
+  margin-top: 124px;
 `;
 
-export const FooterTitle = styled.h3`
+export const FooterColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 2rem;
+  align-items: center;
+`;
+
+export const FooterTitleNav = styled.h3`
+  color: #47d16e;
+  font-family: "DM Sans", sans-serif;
   font-size: 16px;
-  font-family: inherit;
-  font-weight: 700;
-  color: white;
-  @media only screen and (${devices.xs}) {
-    font-size: 14px;
-  }
-  @media only screen and (${devices.sm}) {
-    font-size: 16px;
-  }
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 125% */
+  letter-spacing: 0.15px;
 `;
 
-export const LinkTel=styled.a`
+export const FooterText = styled(Link)`
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.25px;
+  text-decoration: none;
+  &:hover{
+    border-bottom: solid 2px #47d16e;
+  }
+`;
+export const FooterTitle = styled.p`
+  color: #fff;
+  font-family:"Poppins",sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; /* 133.333% */
+`;
+
+export const LinkTel = styled.a`
   color: white;
   text-decoration: none;
-`
+`;
 
 export const FooterContainer = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-around;
   color: black;
   gap: 12px;
-  width: 100%;
+  padding: 64px 142px 32px 150px;
+  @media only screen and (${devices.xs}) {
+    flex-direction: column;
+    justify-content: center;
+  
+  }
+  @media only screen and (${devices.sm}) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 `;
 export const LinkContainer = styled.div`
   display: flex;

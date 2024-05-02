@@ -32,6 +32,7 @@ import {
 import cv from "../../../public/assets/pdf/cv_yandry_villagomez.pdf";
 import CardAbout from "../CardAbout/CardAbout";
 import Skills from "../Skills/Skills";
+import Proyects from "../Proyects/Proyects";
 
 const Card=lazy(()=>import("../Card/Card"));
 const Footer=lazy(()=>import("../Footer/Footer"))
@@ -99,6 +100,7 @@ function Content() {
         </Portada>
         <CardAbout/>
         <Skills/>
+        <Proyects/>
       </ContentMain>
     </>
   );
