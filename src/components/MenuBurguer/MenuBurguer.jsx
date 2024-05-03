@@ -29,13 +29,13 @@ function MenuBurguers(props) {
   const LinkData = [
     {
       id: 1,
-      enlace: "https://www.linkedin.com/in/rafaelvillagomez/",
+      enlace: "/home",
       name: "Inicio",
       icon: <IoHomeOutline />,
     },
     {
       id: 2,
-      enlace: "https://www.linkedin.com/in/rafaelvillagomez/",
+      enlace: "/about",
       name: "Acerca de mi",
       icon: <FaFingerprint />,
     },

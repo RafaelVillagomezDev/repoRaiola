@@ -60,15 +60,16 @@ export const FooterContainer = styled.div`
   display: flex;
   color: black;
   gap: 12px;
-  padding: 64px 142px 32px 150px;
+  
   @media only screen and (${devices.xs}) {
     flex-direction: column;
     justify-content: center;
-  
+    padding: 32px 62px;
   }
   @media only screen and (${devices.sm}) {
     flex-direction: row;
     justify-content: space-around;
+    padding: 64px 142px 32px 150px;
   }
 `;
 export const LinkContainer = styled.div`
