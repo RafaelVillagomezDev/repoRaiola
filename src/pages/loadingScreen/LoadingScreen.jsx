@@ -1,7 +1,7 @@
 import React, { lazy } from "react";
 import animationData from "../../../public/assets/lottie/lazyLoadLottie.json";
 
-import Lottie from "react-lottie-player";
+import {Lottie } from "react-lottie-player";
 
 function LoadingScreen() {
   return (
