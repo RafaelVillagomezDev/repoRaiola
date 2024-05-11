@@ -7,10 +7,11 @@ import LoadingScreen from "./pages/loadingScreen/LoadingScreen";
 
 
 
+
 const Main = lazy(() => import("./pages/main/Main"));
 const About = lazy(() => import("./pages/about/About"));
 const ErrorPage = lazy(() => import("./pages/error/error-page"));
-
+const Proyects= lazy(() => import("./pages/proyects/Proyects"));
 
 
 
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <Main />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/proyects",
+    element: <Proyects/>,
     errorElement: <ErrorPage />,
   },
 ]);

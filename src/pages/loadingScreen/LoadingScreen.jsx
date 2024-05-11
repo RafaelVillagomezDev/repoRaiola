@@ -11,7 +11,6 @@ function LoadingScreen() {
           loop
           animationData={animationData}
           play
-          style={{ width: 505, height: 950 }}
           rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
         />
       </div>

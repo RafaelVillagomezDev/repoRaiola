@@ -22,10 +22,11 @@ function SliderCard() {
       >
       
       {proyects.map((slide)=>{
-        return(<SwiperSlide  key={slide.id ? slide.id : index}>
+        return(<SwiperSlide  key={slide.id}>
           <LazyLoadImage
             width={220}
             height={280}
+            key={slide.id}
             src={slide?.thumbnail}
             alt={slide?.title}
             placeholderSrc={slide.thumbnail}

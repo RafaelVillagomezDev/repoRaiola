@@ -37,32 +37,46 @@ export const CarrousellSkills = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  align-items: center;
-  justify-content: center;
   @media only screen and (${devices.xs}) {
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
+   
   }
   @media only screen and (${devices.sm}) {
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  @media only screen and (${devices.lg}) {
     flex-direction: row;
+    align-items:start;
+    
   }
 `;
 
 export const CardSkill = styled.div`
   display: flex;
   padding: 24px;
-
+  width: 327px;
+  max-width: 354px;
   align-items: flex-start;
   gap: 15px;
   border-radius: 8px;
   background-color: #1f1f21;
   @media only screen and (${devices.xs}) {
     flex-direction: column;
-    max-width: 327px;
+  
   }
   @media only screen and (${devices.sm}) {
     flex-direction: column;
-    max-width: 354px;
+    height: 330px;
+    
+  }
+  @media only screen and (${devices.lg}) {
+    flex-direction: column;
+   
+    
   }
 `;
 

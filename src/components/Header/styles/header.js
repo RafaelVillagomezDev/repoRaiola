@@ -115,9 +115,7 @@ export const Input = styled.input`
     &:before {
       transform: translate(32px, -50%);
       content: "🌚";
-      position: absolute;
-      width: 28px;
-      height: 28px;
+   
     }
   }
 `;

@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { TfiClose } from "react-icons/tfi";
 import { BsLaptop } from "react-icons/bs";
 import { FaFingerprint } from "react-icons/fa6";
-import { FaBars } from "react-icons/fa6";
-import { FaSkullCrossbones } from "react-icons/fa6";
+import { FaX } from "react-icons/fa6";
 import { IoHomeOutline } from "react-icons/io5";
+
 import {
   MenuBurguer,
   HeaderMenuBurguer,
@@ -15,8 +14,6 @@ import {
   ListMenu,
   LinkPersonalized,
   ContainerLink,
-  BtnBurguer,
-  BtnTitle,
 } from "./styles/menu";
 
 import logoHeader from "../../../public/assets/icons/logoHeader.png";
@@ -95,7 +92,7 @@ function MenuBurguers(props) {
       <MenuBurguer isClicked={props.isClicked}>
         <HeaderMenuBurguer>
           <BtnCloseMenu  onClick={props.handleClose}>
-            <FaSkullCrossbones style={{ color: "#FFF" }} size={"18px"} />
+            <FaX style={{ color: "#FFF" }} size={"18px"} />
           </BtnCloseMenu>
         </HeaderMenuBurguer>
         <ContainerList>

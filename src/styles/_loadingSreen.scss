@@ -1,7 +1,15 @@
-#container_lottie{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: radial-gradient(circle, rgba(45,79,55,1) 0%, rgba(23,23,24,1) 43%);
+@use "./mixin.scss" as *;
+
+#container_lottie {
+  width: 100%;
+  min-width: 350px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+    circle,
+    rgba(45, 79, 55, 1) 0%,
+    rgba(23, 23, 24, 1) 43%
+  );
 }
