@@ -1,16 +1,60 @@
 import React, { Suspense, lazy } from "react";
 import LoadingScreen from "../loadingScreen/LoadingScreen";
-import { ContainerAbout } from "./styles/about";
+import {
+  AboutCardMe,
+  BoxAbout,
+  ButtonBack,
+  CardMeLeft,
+  CardMeRight,
+  ContainerAbout,
+  TextAbout,
+  TitleAbout,
+} from "./styles/about";
 const Header = lazy(() => import("../../components/Header/Header"));
+const CardAboutPage = lazy(() => import("../../components/CardAboutPage/CardAboutPage"));
+import { IoArrowBack } from "react-icons/io5";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import fondo from "../../../public/assets/img/fondo.png";
 
 function About() {
+  function historyGoBack() {
+    globalThis.history.go(-1);
+  }
+
   return (
-    <>
-   <Suspense fallback={<LoadingScreen />}>
+    <Suspense fallback={<LoadingScreen />}>
       <Header />
+      <ContainerAbout>
+        <BoxAbout>
+          <ButtonBack onClick={historyGoBack}>
+            <IoArrowBack /> volver
+          </ButtonBack>
+          <AboutCardMe>
+            <CardMeRight>
+              <LazyLoadImage alt={"fondo_about"} src={fondo} />
+            </CardMeRight>
+            <CardMeLeft>
+              <TitleAbout> Yandry Villa</TitleAbout>
+              <TextAbout>
+                Soy Desarrolador Web, actualmente vivo en Madrid, España. Me
+                agrada la idea de trabajar en equipo, pienso que es una manera
+                de conectar con nuevas habilidades y de brindar mi conocimiento
+                al equipo con el fin de mejorar la productividad en el
+                desarrollo de algun producto digital. Me gusta descubrir cosas
+                nuevas a diario y ser un activo valioso en cualquier equipo en
+                el que me desarrolle, por lo que estoy aprendiendo
+                constantemente e investigando acerca de las nuevas tendencias.
+                Trato de buscar todo el Feedback posible en los proyectos, con
+                el fin de mejorar y poder hacer aplicaciones que ayuden a las personas .
+                
+              </TextAbout>
+              <TextAbout> Hablemos! yandry75@gmail.com</TextAbout>
+            </CardMeLeft>
+          </AboutCardMe>
+        </BoxAbout>
+      </ContainerAbout>
+      <CardAboutPage/>
     </Suspense>
-    </>
-   
   );
 }
 

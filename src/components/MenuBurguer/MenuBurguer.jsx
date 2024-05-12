@@ -80,7 +80,7 @@ function MenuBurguers(props) {
       <LinkPersonalized
         to={element.enlace}
         key={element.id}
-        contenturl={element.contentUrl}
+        contenturl={element.contenturl}
       >
         {element.contentUrl}
       </LinkPersonalized>
