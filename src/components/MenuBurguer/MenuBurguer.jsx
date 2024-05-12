@@ -25,20 +25,20 @@ function MenuBurguers(props) {
   
   const LinkData = [
     {
-      id: 1,
+      id: "home",
       enlace: "/home",
       name: "Inicio",
       icon: <IoHomeOutline />,
     },
     {
-      id: 2,
+      id: "abput",
       enlace: "/about",
       name: "Acerca de mi",
       icon: <FaFingerprint />,
     },
     {
-      id: 3,
-      enlace: "#",
+      id: "proyects",
+      enlace: "/proyects",
       name: "Proyectos",
       icon: <BsLaptop />,
     },
@@ -49,7 +49,7 @@ function MenuBurguers(props) {
   const ElemLink = LinkData.map((element) => {
     return (
       <List>
-        <LinkList to={element.enlace} key={element.id} target="_blank">
+        <LinkList to={element.enlace} key={element.id} >
           {element.name} {element.icon}
         </LinkList>
       </List>
@@ -58,20 +58,20 @@ function MenuBurguers(props) {
 
   const LinkDataFooter = [
     {
-      id: 1,
+      id: "gmail",
       enlace: "mailto:yandry75@gmail.com?Subject=Oferta%20de%20trabajo%20",
-      contentUrl: gmail,
+      contenturl: gmail,
     },
     {
-      id: 2,
+      id: "linkdn",
       enlace: "https://www.linkedin.com/in/rafaelvillagomez/",
-      contentUrl: linkdn,
+      contenturl: linkdn,
     },
     {
-      id: 3,
+      id: "whatsapp",
       enlace:
         "https://wa.me/618152241?text=Hola%20Yandry%20me%20gustaria%20hablar%20de%20trabajo%20",
-      contentUrl: whatsapp,
+      contenturl: whatsapp,
     },
   ];
 
@@ -80,7 +80,7 @@ function MenuBurguers(props) {
       <LinkPersonalized
         to={element.enlace}
         key={element.id}
-        contentUrl={element.contentUrl}
+        contenturl={element.contentUrl}
       >
         {element.contentUrl}
       </LinkPersonalized>
@@ -89,9 +89,9 @@ function MenuBurguers(props) {
 
   return (
     <>
-      <MenuBurguer isClicked={props.isClicked}>
+      <MenuBurguer isclicked={props.isclicked ? props.isclicked  : undefined}>
         <HeaderMenuBurguer>
-          <BtnCloseMenu  onClick={props.handleClose}>
+          <BtnCloseMenu  onClick={props.handleclose ? props.handleclose  : undefined}>
             <FaX style={{ color: "#FFF" }} size={"18px"} />
           </BtnCloseMenu>
         </HeaderMenuBurguer>

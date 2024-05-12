@@ -1,15 +1,17 @@
-import React, { lazy } from "react";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
+import React, { Suspense, lazy } from "react";
+import LoadingScreen from "../loadingScreen/LoadingScreen";
+import { ContainerAbout } from "./styles/about";
+const Header = lazy(() => import("../../components/Header/Header"));
 
 function About() {
-    return (
-      <>
-          <Header/>
-          
-      </>
-    );
-  }
-  
-  export default About;
-  
+  return (
+    <>
+   <Suspense fallback={<LoadingScreen />}>
+      <Header />
+    </Suspense>
+    </>
+   
+  );
+}
+
+export default About;

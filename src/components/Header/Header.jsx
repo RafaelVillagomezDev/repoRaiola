@@ -30,11 +30,10 @@ function Header() {
   };
 
   const [checked, setChecked] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
+  const [isclicked, setIsClicked] = useState(false);
 
-  const handleClose = () => {
-    setIsClicked(!isClicked);
-    console.log(isClicked);
+  const handleclose = () => {
+    setIsClicked(!isclicked);
   };
 
   const handleChange = (e) => {
@@ -42,19 +41,19 @@ function Header() {
   };
   const LinkData = [
     {
-      id: 1,
+      id: "inicio",
       name: "Inicio",
       enlace: "/home",
       contentUrl: gmail,
     },
     {
-      id: 2,
+      id: "acerca",
       name: "Acerca de mi",
       enlace: "/about",
       contentUrl: linkdn,
     },
     {
-      id: 3,
+      id: "proyectos",
       name: "Proyectos",
       enlace:
         "/about",
@@ -77,8 +76,8 @@ function Header() {
       <GlobalStyles />
       <HeaderContainer>
         <ContainerElement>
-          <BtnTitle onClick={handleClose}>Yandry.dev</BtnTitle>
-          <BtnBurguer onClick={handleClose}>
+          <BtnTitle onClick={handleclose}>Yandry.dev</BtnTitle>
+          <BtnBurguer onClick={handleclose}>
             <FaBars style={{ color: "#FFF" }} size={"18px"} />
           </BtnBurguer>
         </ContainerElement>
@@ -97,7 +96,7 @@ function Header() {
           <ButtonContact>Contactame</ButtonContact>
         </ContainerElement>
       </HeaderContainer>
-      <MenuBurguers isClicked={isClicked} handleClose={handleClose} />
+      <MenuBurguers isclicked={isclicked} handleclose={handleclose} />
     </ThemeProvider>
   );
 }

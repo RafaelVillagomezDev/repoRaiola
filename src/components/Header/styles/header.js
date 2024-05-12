@@ -99,7 +99,7 @@ export const Switch = styled.div`
     width: 28px;
     height: 28px;
     border-radius: 35px;
-    top: 55%;
+    top: 50%;
     left: 4px;
     transform: translate(0, -50%);
   }

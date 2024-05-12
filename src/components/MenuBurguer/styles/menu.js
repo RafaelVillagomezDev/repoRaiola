@@ -58,14 +58,14 @@ const slideOut = keyframes`
 export const MenuBurguer = styled.div`
   width: 50%;
   top: 0;
-  left: ${({ isClicked }) => (isClicked ? '0' : '-100%')};
+  left: ${({ isclicked }) => (isclicked ? '0' : '-100%')};
   position: fixed;
   height: 100%;
   background-color: #171718;
   z-index: 2;
   padding: 15px;
   transition: left 0.5s ease;
-  animation: ${({ isClicked }) => (isClicked ? slideIn : slideOut)} 0.5s ease forwards;
+  animation: ${({ isclicked }) => (isclicked ? slideIn : slideOut)} 0.5s ease forwards;
   @media only screen and (${devices.xs}) {
     width: 50%;
   }
@@ -74,7 +74,7 @@ export const MenuBurguer = styled.div`
   }
 
   @media only screen and (${devices.lg}) {
-     width:22%;
+     width:18%;
   }
  
 `;
@@ -151,7 +151,7 @@ export const LinkPersonalized = styled(Link)`
   width: 28px;
   height: 28px;
   
-  content: url(${(props) => props.contentUrl});
+  content: url(${(props) => props.contenturl});
   &:hover {
     color: red;
   }
