@@ -8,7 +8,7 @@ function CardAbout() {
       <CardAboutBox>
         <CardAboutLeft>
           <LazyLoadImage 
-          src={fondo}/>
+          src={fondo} style={{width:"100%"}}/>
         </CardAboutLeft>
         <CardAboutRight>
             <CardAboutTitle>Acerca de mi</CardAboutTitle>

@@ -3,7 +3,7 @@ import { devices } from "../../../styles/mixin_styledComponent";
 
 export const AboutContainer = styled.div`
   width: 100%;
- 
+
 `;
 
 export const AboutTitle = styled.h3`
@@ -19,16 +19,33 @@ export const AboutTitle = styled.h3`
 `;
 
 export const BoxAbout = styled.div`
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  
+  @media only screen and (${devices.xs}) {
+    align-items: center;
+    flex-direction: column;
+    margin: 3rem;
+  }
+  @media only screen and (${devices.sm}) {
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 2rem;
+  }
 `;
 
 export const CardAbout = styled.div`
-  display: flex;
-  width: 354px;
   padding: 24px;
-  flex-direction: column;
-  align-items: flex-start;
   gap: 15px;
   border-radius: 8px;
   background-color: #1f1f21;
+  @media only screen and (${devices.xs}) {
+    max-width: 329px;
+    width: 100%;
+  }
+  @media only screen and (${devices.sm}) {
+    flex: 1 1 30%;
+    max-width: 23%;
+  }
 `;

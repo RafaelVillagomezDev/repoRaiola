@@ -58,7 +58,7 @@ export const CarrousellSkills = styled.div`
 export const CardSkill = styled.div`
   display: flex;
   padding: 24px;
-  width: 327px;
+
   max-width: 354px;
   align-items: flex-start;
   gap: 15px;
@@ -66,10 +66,11 @@ export const CardSkill = styled.div`
   background-color: #1f1f21;
   @media only screen and (${devices.xs}) {
     flex-direction: column;
-  
+    width: 230px;
   }
   @media only screen and (${devices.sm}) {
     flex-direction: column;
+    width: 300px;
     height: 330px;
     
   }

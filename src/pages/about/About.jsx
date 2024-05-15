@@ -30,8 +30,8 @@ function About() {
             <IoArrowBack /> volver
           </ButtonBack>
           <AboutCardMe>
-            <CardMeRight>
-              <LazyLoadImage alt={"fondo_about"} src={fondo} />
+            <CardMeRight >
+              <LazyLoadImage alt={"fondo_about"} className="image_resize" src={fondo} />
             </CardMeRight>
             <CardMeLeft>
               <TitleAbout> Yandry Villa</TitleAbout>
