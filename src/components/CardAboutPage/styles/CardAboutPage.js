@@ -3,7 +3,6 @@ import { devices } from "../../../styles/mixin_styledComponent";
 
 export const AboutContainer = styled.div`
   width: 100%;
-
 `;
 
 export const AboutTitle = styled.h3`
@@ -14,15 +13,21 @@ export const AboutTitle = styled.h3`
   line-height: 40px; /* 117.647% */
   letter-spacing: 0.25px;
   color: #47d16e;
-  padding: 128px 0px;
+
   text-align: center;
+  @media only screen and (${devices.xs}) {
+    padding: 32px;
+  }
+  @media only screen and (${devices.sm}) {
+    padding: 128px 0px;
+  }
 `;
 
 export const BoxAbout = styled.div`
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-  
+
   @media only screen and (${devices.xs}) {
     align-items: center;
     flex-direction: column;
@@ -36,16 +41,40 @@ export const BoxAbout = styled.div`
 `;
 
 export const CardAbout = styled.div`
+  display: flex;
   padding: 24px;
   gap: 15px;
+  width: 100%;
   border-radius: 8px;
   background-color: #1f1f21;
+  max-width: 329px;
+  flex-direction: column;
   @media only screen and (${devices.xs}) {
-    max-width: 329px;
     width: 100%;
+    
   }
   @media only screen and (${devices.sm}) {
     flex: 1 1 30%;
-    max-width: 23%;
+
   }
+`;
+
+export const TitleCardAbout = styled.h3`
+  color: #fff;
+  font-family: "DM Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 0.25px;
+`;
+
+export const TextCardAbout = styled.p`
+  color: #fff;
+  font-family: "DM Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.25px;
 `;

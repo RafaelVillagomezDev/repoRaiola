@@ -11,6 +11,7 @@ import {
   TitleAbout,
 } from "./styles/about";
 const Header = lazy(() => import("../../components/Header/Header"));
+const Footer = lazy(() => import("../../components/Footer/Footer"));
 const CardAboutPage = lazy(() => import("../../components/CardAboutPage/CardAboutPage"));
 import { IoArrowBack } from "react-icons/io5";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -53,7 +54,9 @@ function About() {
           </AboutCardMe>
         </BoxAbout>
       </ContainerAbout>
+      
       <CardAboutPage/>
+      <Footer/>
     </Suspense>
   );
 }

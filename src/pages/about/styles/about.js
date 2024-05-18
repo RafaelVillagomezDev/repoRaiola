@@ -58,12 +58,18 @@ export const CardMeLeft = styled.div`
 
 export const TitleAbout = styled.h1`
   font-family: "DM Sans", sans-serif;
-  font-size: 60px;
+ 
   font-style: normal;
   font-weight: 700;
   line-height: 71px;
   text-align: center;
   margin: 0rem;
+  @media only screen and (${devices.xs}) {
+     font-size: 40px;
+  }
+  @media only screen and (${devices.md}) {
+    font-size: 60px;
+  }
 `;
 
 export const TextAbout = styled.p`

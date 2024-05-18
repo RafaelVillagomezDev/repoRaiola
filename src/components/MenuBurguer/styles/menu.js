@@ -103,7 +103,6 @@ export const List = styled.li`
   line-height: 2rem;
   margin-bottom: 1rem;
   list-style: none;
-  padding: 0rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
