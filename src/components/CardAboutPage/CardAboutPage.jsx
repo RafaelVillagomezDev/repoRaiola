@@ -4,14 +4,28 @@ import {
   AboutTitle,
   BoxAbout,
   CardAbout,
+  ContainerStar,
   TextCardAbout,
   TitleCardAbout,
 } from "./styles/CardAboutPage";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { contentSkills } from "./Card/content";
 import { languageSkills } from "./Card/language_content";
+import { bdContent} from "./Card/bd_content";
+import star  from "../../../public/assets/icons/about/star.png";
+
 
 function CardAboutPage() {
+
+  const Star=()=>{
+      const elementos = [];
+      for (let i = 1; i <= 5; i++) {
+        elementos.push(<LazyLoadImage  width={"20px"} key={"start"} src={star} alt={"start"} />)
+      }
+
+      return elementos
+  }
+  
   return (
     <AboutContainer>
       <AboutTitle>Mis Habilidades</AboutTitle>
@@ -26,7 +40,7 @@ function CardAboutPage() {
           );
         })}
       </BoxAbout>
-      <AboutTitle>Lenguajes y librerias Frontend</AboutTitle>
+      <AboutTitle>Lenguajes y librerias </AboutTitle>
       <BoxAbout>
         {languageSkills.map((card) => {
           return (
@@ -34,6 +48,24 @@ function CardAboutPage() {
               <LazyLoadImage width={"30px"} key={card.id} src={card.thumbnail} alt={card.title} />
               <TitleCardAbout>{card.title}</TitleCardAbout>
               <TextCardAbout>{card.text}</TextCardAbout>
+              <ContainerStar>
+                 <Star/>
+              </ContainerStar>
+            </CardAbout>
+          );
+        })}
+      </BoxAbout>
+      <AboutTitle>Bases de Datos</AboutTitle>
+      <BoxAbout>
+        {bdContent.map((card) => {
+          return (
+            <CardAbout>
+              <LazyLoadImage width={"30px"} key={card.id} src={card.thumbnail} alt={card.title} />
+              <TitleCardAbout>{card.title}</TitleCardAbout>
+              <TextCardAbout>{card.text}</TextCardAbout>
+              <ContainerStar>
+                 <Star/>
+              </ContainerStar>
             </CardAbout>
           );
         })}

@@ -78,3 +78,11 @@ export const TextCardAbout = styled.p`
   line-height: 20px; /* 142.857% */
   letter-spacing: 0.25px;
 `;
+
+export const ContainerStar=styled.div`
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+
+`

@@ -71,7 +71,7 @@ export const CardSkill = styled.div`
   @media only screen and (${devices.sm}) {
     flex-direction: column;
     width: 300px;
-    height: 330px;
+    height: 305px;
     
   }
   @media only screen and (${devices.lg}) {
@@ -98,7 +98,7 @@ export const CardTitle = styled.h3`
     font-size: 20px;
   }
   @media only screen and (${devices.lg}) {
-    font-size: 34px;
+    font-size: 24px;
   }
 `;
 
