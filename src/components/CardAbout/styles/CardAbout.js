@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { devices } from "../../../styles/mixin_styledComponent";
+import { Link } from "react-router-dom";
 
 export const CardAboutContainer = styled.div`
   width: 100%;
@@ -66,7 +67,7 @@ export const CardAboutText = styled.p`
   letter-spacing: 0.44px;
 `;
 
-export const CardButton = styled.div`
+export const CardButton = styled(Link)`
   display: flex;
   padding: 16px 20px;
   max-width: 205px;
@@ -76,4 +77,5 @@ export const CardButton = styled.div`
   border-radius: 8px;
   background-color: transparent;
   color: #FAFAFA;
+  text-decoration: none;
 `;

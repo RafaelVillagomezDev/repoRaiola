@@ -133,7 +133,7 @@ export const LinkSkills = styled(Link)`
   text-decoration: none;
 `;
 
-export const ButtonTitle = styled.span`
+export const ButtonTitle = styled.button`
   display: flex;
   gap: 0.5rem;
   color: #fff;
@@ -143,4 +143,7 @@ export const ButtonTitle = styled.span`
   font-style: normal;
   font-weight: 500;
   line-height: 16px; /* 100% */
+  text-decoration: none;
+  background-color:transparent;
+  border: none;
 `;

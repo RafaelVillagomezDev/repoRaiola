@@ -18,8 +18,8 @@ function Proyects() {
           );
         })}
       </ProyectContainer>
-      <LinkSkills>
-        <ButtonTitle>
+      <LinkSkills to="/proyects" key="more_proyects">
+        <ButtonTitle >
           Ver mas proyectos <FaArrowRight />
         </ButtonTitle>
       </LinkSkills>

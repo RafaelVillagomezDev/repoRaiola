@@ -7,12 +7,14 @@ import {
   FooterTitle,
   FooterTitleNav,
   LinkContainer,
+  LinkNavAbout,
+  LinkPersonalized,
   LinkTel,
 } from "./styles/Footer";
 import gmail from "../../../public/assets/icons/gmail.png";
 import linkdn from "../../../public/assets/icons/linkedin.png";
 import whatsapp from "../../../public/assets/icons/whatsapp.png";
-import { LinkPersonalized } from "../Header/styles/header";
+
 function Footer() {
   const LinkData = [
     {
@@ -33,17 +35,19 @@ function Footer() {
     },
   ];
 
-  const elemLink = LinkData.map((element) => {
+  const elemLinkNav = LinkData.map((element) => {
     return (
       <LinkPersonalized
         to={element.enlace}
         key={element.id}
         contentUrl={element.contentUrl}
+        target="_blank"
       >
         {element.contentUrl}
       </LinkPersonalized>
     );
   });
+
   return (
     <>
       <FooterComponent>
@@ -53,17 +57,31 @@ function Footer() {
           </FooterColumn>
           <FooterColumn>
             <FooterTitleNav>Inicio</FooterTitleNav>
-            <FooterText target="_blank" >Acerca de mi</FooterText>
-            <FooterText target="_blank" >Proyectos</FooterText>
+            <FooterText target="_blank" to="/about">
+              Acerca de mi
+            </FooterText>
+            <FooterText target="_blank" to="/proyects">
+              Proyectos
+            </FooterText>
           </FooterColumn>
           <FooterColumn>
             <FooterTitleNav>Contáctame</FooterTitleNav>
-            <FooterText  target="_blank" to="mailto:yandry75@gmail.com?Subject=Oferta%20de%20trabajo%20">Correo</FooterText>
-            <FooterText  target="_blank" to="https://www.linkedin.com/in/rafaelvillagomez/">Linkdn</FooterText>
+            <FooterText
+              target="_blank"
+              to="mailto:yandry75@gmail.com?Subject=Oferta%20de%20trabajo%20"
+            >
+              Correo
+            </FooterText>
+            <FooterText
+              target="_blank"
+              to="https://www.linkedin.com/in/rafaelvillagomez/"
+            >
+              Linkdn
+            </FooterText>
           </FooterColumn>
           <FooterColumn>
             <FooterTitleNav>Social</FooterTitleNav>
-            
+            <LinkNavAbout>{elemLinkNav}</LinkNavAbout>
           </FooterColumn>
         </FooterContainer>
       </FooterComponent>

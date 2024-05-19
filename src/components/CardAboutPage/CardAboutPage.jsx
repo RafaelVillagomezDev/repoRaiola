@@ -20,7 +20,7 @@ function CardAboutPage() {
   const Star=()=>{
       const elementos = [];
       for (let i = 1; i <= 5; i++) {
-        elementos.push(<LazyLoadImage  width={"20px"} key={"start"} src={star} alt={"start"} />)
+        elementos.push(<LazyLoadImage key={i}  width={"20px"}  src={star} alt={"start"} />)
       }
 
       return elementos

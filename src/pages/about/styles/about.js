@@ -80,3 +80,10 @@ export const TextAbout = styled.p`
   line-height: 28px;
   padding-top: 20px;
 `;
+
+export const TextLink=styled(Link)`
+  text-decoration: none;
+  color:#47d16e; 
+
+`
+

@@ -29,6 +29,11 @@ export const FooterTitleNav = styled.h3`
   letter-spacing: 0.15px;
 `;
 
+export const LinkNavAbout=styled.div`
+  display: flex;
+  column-gap: 12px;
+`
+
 export const FooterText = styled(Link)`
   color: #fff;
   font-family: "DM Sans", sans-serif;

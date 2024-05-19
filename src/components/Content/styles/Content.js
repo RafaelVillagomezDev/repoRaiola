@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { devices } from "../../../styles/mixin_styledComponent";
 import portadaImg from "../../../../public/assets/img/portada.jpg";
+import { Link } from "react-router-dom";
 
 export const Portada = styled.div`
   display: flex;
@@ -114,7 +115,7 @@ export const PortadaContent = styled.p`
   align-items: center;
 `;
 
-export const PortadaButton = styled.a`
+export const PortadaButton = styled(Link)`
   background-color: #009d5c;
   border-width: 2px;
   border-color: white;

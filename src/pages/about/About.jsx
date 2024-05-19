@@ -8,6 +8,7 @@ import {
   CardMeRight,
   ContainerAbout,
   TextAbout,
+  TextLink,
   TitleAbout,
 } from "./styles/about";
 const Header = lazy(() => import("../../components/Header/Header"));
@@ -49,7 +50,8 @@ function About() {
                 el fin de mejorar y poder hacer aplicaciones que ayuden a las personas .
                 
               </TextAbout>
-              <TextAbout> Hablemos! yandry75@gmail.com</TextAbout>
+
+              <TextAbout> Hablemos!<TextLink to="mailto:yandry75@gmail.com?Subject=Oferta%20de%20trabajo%20" key="mailto_mail"> yandry75@gmail.com </TextLink></TextAbout>
             </CardMeLeft>
           </AboutCardMe>
         </BoxAbout>
