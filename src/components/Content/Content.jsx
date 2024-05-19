@@ -81,7 +81,7 @@ function Content() {
                 aplicaciones web que conducen al éxito.
               </PortadaContent>
               <ContainerBtn>
-                <PortadaButton  key={"proyectos"} to={"./proyects"}>
+                <PortadaButton  key={"proyectos"} to={"/proyects"}>
                   <ButtonTitle>Proyectos<BsLaptop/></ButtonTitle>
                 </PortadaButton>
                 <CvButton

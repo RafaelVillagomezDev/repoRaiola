@@ -13,7 +13,7 @@ function CardAbout() {
         <CardAboutRight>
             <CardAboutTitle>Acerca de mi</CardAboutTitle>
             <CardAboutText>
-            Hola! mi nombre es Yandry y tengo una gran afinidad hacía el trabajo colaborativo, me gusta crear aplicaciones web que inspiren e involucren a las personas. Como desarrolador web, considero que un buen producto no solo brinda una solución sino que permite crear una experiencia emocional en las personas que lo usan.
+            Hola, mi nombre es Yandry y tengo una gran afinidad hacía el trabajo colaborativo. Me gusta crear aplicaciones web que inspiren e involucren a las personas. Como desarrolador web, considero que un buen producto no solo brinda una solución ,sino que permita crear una experiencia emocional en las personas que lo usan.
             </CardAboutText>
             <CardButton key="more_about_me" to="/about">
                 Mas acerca de mi

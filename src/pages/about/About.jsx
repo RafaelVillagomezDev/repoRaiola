@@ -38,13 +38,13 @@ function About() {
             <CardMeLeft>
               <TitleAbout> Yandry Villa</TitleAbout>
               <TextAbout>
-                Soy Desarrolador Web, actualmente vivo en Madrid, España. Me
+                Soy Desarrollador Web, actualmente vivo en Madrid, España. Me
                 agrada la idea de trabajar en equipo, pienso que es una manera
                 de conectar con nuevas habilidades y de brindar mi conocimiento
-                al equipo con el fin de mejorar la productividad en el
+                al equipo ,con el fin de mejorar la productividad en el
                 desarrollo de algun producto digital. Me gusta descubrir cosas
                 nuevas a diario y ser un activo valioso en cualquier equipo en
-                el que me desarrolle, por lo que estoy aprendiendo
+                el que me desarrolle.Por este motivo estoy aprendiendo
                 constantemente e investigando acerca de las nuevas tendencias.
                 Trato de buscar todo el Feedback posible en los proyectos, con
                 el fin de mejorar y poder hacer aplicaciones que ayuden a las personas .
