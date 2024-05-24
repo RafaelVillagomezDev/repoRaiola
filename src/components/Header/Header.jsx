@@ -22,6 +22,7 @@ import whatsapp from "../../../public/assets/icons/whatsapp.png";
 import MenuBurguers from "../MenuBurguer/MenuBurguer";
 import { BtnTitle } from "../MenuBurguer/styles/menu";
 import { FaBars } from "react-icons/fa6";
+import Form from "../Portals/Form";
 
 function Header() {
   const [theme, setTheme] = useState("light");
@@ -31,6 +32,7 @@ function Header() {
 
   const [checked, setChecked] = useState(false);
   const [isclicked, setIsClicked] = useState(false);
+  const [openPortal, setOpenPortal] = useState(false);
 
   const handleclose = () => {
     setIsClicked(!isclicked);
@@ -71,6 +73,10 @@ function Header() {
     );
   });
 
+  const openPortalForm=()=>{
+    setOpenPortal(!openPortal);
+  }
+
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
@@ -93,10 +99,11 @@ function Header() {
             />
             <Switch />
           </Label>
-          <ButtonContact>Contactame</ButtonContact>
+          <ButtonContact onClick={openPortalForm}>Contactame</ButtonContact>
         </ContainerElement>
       </HeaderContainer>
       <MenuBurguers isclicked={isclicked} handleclose={handleclose} />
+      <Form  openPortal={openPortal}  openPortalForm={openPortalForm}/>
     </ThemeProvider>
   );
 }
