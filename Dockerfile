@@ -35,3 +35,4 @@ COPY --from=build /app/dist /usr/share/nginx/html/
 EXPOSE 3000
 # Ejecuta Nginx en primer plano
 CMD ["nginx", "-g", "daemon off;"]
+ 
