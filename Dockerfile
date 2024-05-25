@@ -1,27 +1,37 @@
-# Specify the base image
-FROM node:18  as build
-# make directory
+# Etapa 1: Construcción de la aplicación
+FROM node:18 as build
+
+# Crear el directorio de la aplicación
 RUN mkdir -p /app
-RUN chmod -R 777 /app
-# Set the working directory
+
+# Establece el directorio de trabajo
 WORKDIR /app
-# Copy the package.json and package-lock.json files
-COPY package*.json .
-# Install the dependencies
+
+# Copia package.json y package-lock.json
+COPY package*.json ./
+
+# Instala las dependencias
 RUN npm install
-# Copy the app files
+
+# Copia los archivos de la aplicación
 COPY . .
-# Build the app
+
+# Construye la aplicación
 RUN npm run build
 
-# ## STAGE 2
-# FROM nginx:alpine
-# ## Remove default nginx index page
-# RUN rm -rf /usr/share/nginx/html/*"
+# Etapa 2: Configuración de Nginx
+FROM nginx:alpine
 
-# ADD ./config/nginx.conf /etc/nginx/conf.d/nginx.conf
-# COPY --from=build /app/dist /var/www/app/
-# # Expose the port
-# EXPOSE 3000
-# Run the app
-CMD ["npm","run","start"]
+# Copia el archivo de configuración personalizado de Nginx
+COPY ./.nginx/nginx.conf /etc/nginx/nginx.conf
+
+# Elimina la página index predeterminada de Nginx
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copia los archivos estáticos construidos desde la etapa de build
+COPY --from=build /app/dist /usr/share/nginx/html/
+
+# Exponer el puerto
+EXPOSE 3000
+# Ejecuta Nginx en primer plano
+CMD ["nginx", "-g", "daemon off;"]
