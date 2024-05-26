@@ -3,7 +3,7 @@ services:
     build:  .
     restart: unless-stopped
     ports:
-      - "80:80"
+      - "8000:80"
     volumes:
       - /app/node_modules
       - .:/app
