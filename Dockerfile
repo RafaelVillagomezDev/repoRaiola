@@ -34,7 +34,7 @@ RUN rm -rf /usr/share/nginx/html/*
 
 
 # Exponer el puerto
-EXPOSE 3000
+EXPOSE 80
 # Ejecuta Nginx en primer plano
 CMD ["nginx", "-g", "daemon off;"]
  
