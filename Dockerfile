@@ -22,14 +22,16 @@ RUN npm run build
 # Etapa 2: Configuración de Nginx
 FROM nginx:alpine
 
+# Copia los archivos estáticos construidos desde la etapa de build
+COPY --from=build /app/dist /usr/share/nginx/html/
+
+
 # Copia el archivo de configuración personalizado de Nginx
 COPY ./.nginx/nginx.conf /etc/nginx/nginx.conf
 
 # Elimina la página index predeterminada de Nginx
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copia los archivos estáticos construidos desde la etapa de build
-COPY --from=build /app/dist /usr/share/nginx/html/
 
 # Exponer el puerto
 EXPOSE 3000
