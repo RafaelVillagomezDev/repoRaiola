@@ -31,7 +31,7 @@ RUN rm -rf /usr/share/nginx/html/*
 ADD ./.nginx/nginx.conf /etc/nginx/conf.d/nginx.conf
 
 # Copia los archivos estáticos construidos desde la etapa de build
-COPY --from=build /app/dist /var/www/app/
+COPY --from=build /app/dist /usr/share/nginx/html/
 
 # Exponer el puerto
 EXPOSE 80
