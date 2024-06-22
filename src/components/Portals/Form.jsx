@@ -1,6 +1,6 @@
 import React, { lazy, useState } from "react";
 import {
-    BoxInput,
+  BoxInput,
   BoxPortal,
   BtnClosePortal,
   ContainerForm,
@@ -12,10 +12,39 @@ import {
 } from "./styles/Form";
 import { createPortal } from "react-dom";
 import { FaX } from "react-icons/fa6";
+import { sendEmail } from "../../services/sendMail";
 
 function Form(props) {
   const portalForm = document.body;
-  4;
+  
+  const [formData, setFormData] = useState({
+    email: '',
+    subject: '',
+    messague: '',
+  });
+
+  // Función para manejar cambios en los campos del formulario
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormData((prevValues)=>({
+      ...prevValues,
+      [name]: value
+    }));
+  };
+
+  const submitEmail=async (event)=>{
+    event.preventDefault();
+    
+    try {
+      const response = await sendEmail(formData);
+      console.log('Response:', response);
+    } catch (error) {
+      console.error('Error:', error);
+    }
+    console.log('Form values:', formData);
+  }
+
   return createPortal(
     <ContainerForm openPortal={props.openPortal ? props.openPortal : undefined}>
       <BoxPortal>
@@ -24,19 +53,19 @@ function Form(props) {
         </BtnClosePortal>
         <FormPortal>
             <BoxInput>
-              <LabelInput htmlFor="nombre">Nombre</LabelInput>
-              <InputPortal id="nombre" />
-            </BoxInput>
-            <BoxInput>
               <LabelInput htmlFor="email">Email</LabelInput>
-              <InputPortal id="email" />
+              <InputPortal  type="text" name="email" value={formData.email}  onChange={handleChange}  id="email" />
             </BoxInput>
             <BoxInput>
-              <LabelInput htmlFor="nombre">Mensaje</LabelInput>
-              <InputArea/>
+              <LabelInput  htmlFor="asunto">Asunto</LabelInput>
+              <InputPortal  id="subject" name="subject" type="text"   value={formData.subject} onChange={handleChange}/>
             </BoxInput>
             <BoxInput>
-              <InputSubmit value={"Enviar"}/>
+              <LabelInput htmlFor="mensaje" >Mensaje</LabelInput>
+              <InputArea name="messague" id="messague" value={formData.messague} onChange={handleChange} />
+            </BoxInput>
+            <BoxInput>
+              <InputSubmit  type="submit" onClick={submitEmail} value={"Enviar"}/>
             </BoxInput>
         </FormPortal>
       </BoxPortal>
