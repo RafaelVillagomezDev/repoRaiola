@@ -1,6 +1,3 @@
-
-
-
 export function sendEmail(dataSend) {
     return new Promise((resolve, reject) => {
       const url = "http://yandrydev.es:3000/api/v1/send";
