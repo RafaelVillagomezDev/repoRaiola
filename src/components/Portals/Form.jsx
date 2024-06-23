@@ -13,6 +13,7 @@ import {
 import { createPortal } from "react-dom";
 import { FaX } from "react-icons/fa6";
 import { sendEmail } from "../../services/sendMail";
+import { generateToken } from "../../services/generateToken";
 
 function Form(props) {
   const portalForm = document.body;
@@ -37,12 +38,13 @@ function Form(props) {
     event.preventDefault();
     
     try {
-      const response = await sendEmail(formData);
+      const token=await generateToken(formData);
+      const response = await sendEmail(token);
       console.log('Response:', response);
     } catch (error) {
       console.error('Error:', error);
     }
-    console.log('Form values:', formData);
+  
   }
 
   return createPortal(
