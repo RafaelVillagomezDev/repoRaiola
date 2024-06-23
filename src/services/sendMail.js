@@ -7,7 +7,7 @@ export function sendEmail(token) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "secret-key": token
+          "secret-key": token.token
         },
       })
         .then((res) => {
