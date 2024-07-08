@@ -74,11 +74,12 @@ function Form(props) {
               name="email"
               value={formData.email}
               onChange={handleChange}
+              autoComplete="email"
               id="email"
             />
           </BoxInput>
           <BoxInput>
-            <LabelInput htmlFor="asunto">Asunto</LabelInput>
+            <LabelInput htmlFor="subject">Asunto</LabelInput>
             <InputPortal
               id="subject"
               name="subject"
@@ -88,7 +89,7 @@ function Form(props) {
             />
           </BoxInput>
           <BoxInput>
-            <LabelInput htmlFor="mensaje">Mensaje</LabelInput>
+            <LabelInput htmlFor="messague">Mensaje</LabelInput>
             <InputArea
               name="messague"
               id="messague"

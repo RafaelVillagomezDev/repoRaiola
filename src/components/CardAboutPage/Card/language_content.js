@@ -48,7 +48,7 @@ export const languageSkills = [
     id: 7,
     title: "Express",
     thumbnail: express,
-    text: `Su capacidad de agilizar el desarrollo de aplicaciones web backend. Su diseño simplificado y de middleware hacen de Express una excelente opción para proyectos backend escalables y completos`,
+    text: `Su agilidad para  el desarrollo de aplicaciones web backend. Su diseño simplificado y de middleware hacen de Express una excelente opción para proyectos backend`,
   },
   {
     id: 8,

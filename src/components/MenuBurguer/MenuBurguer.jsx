@@ -31,7 +31,7 @@ function MenuBurguers(props) {
       icon: <IoHomeOutline />,
     },
     {
-      id: "abput",
+      id: "about",
       enlace: "/about",
       name: "Acerca de mi",
       icon: <FaFingerprint />,

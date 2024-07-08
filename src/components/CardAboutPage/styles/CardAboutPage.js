@@ -49,12 +49,14 @@ export const CardAbout = styled.div`
   background-color: #1f1f21;
   max-width: 329px;
   flex-direction: column;
+  justify-content: space-around;
   @media only screen and (${devices.xs}) {
     width: 100%;
     
   }
   @media only screen and (${devices.sm}) {
     flex: 1 1 30%;
+    height:225px;
 
   }
 `;

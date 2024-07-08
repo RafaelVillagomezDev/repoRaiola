@@ -82,7 +82,6 @@ function Header() {
       <GlobalStyles />
       <HeaderContainer>
         <ContainerElement>
-          <BtnTitle onClick={handleclose}>Yandry.dev</BtnTitle>
           <BtnBurguer onClick={handleclose}>
             <FaBars style={{ color: "#FFF" }} size={"18px"} />
           </BtnBurguer>
@@ -90,8 +89,11 @@ function Header() {
 
         <NavPersonalized>{elemLink}</NavPersonalized>
         <ContainerElement>
+        </ContainerElement>
+        <ContainerElement>
           <Label>
             <Input
+              id="checkbox-mode_dark"
               checked={checked}
               onClick={themeToggler}
               type="checkbox"

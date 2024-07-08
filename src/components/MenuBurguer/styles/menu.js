@@ -31,9 +31,7 @@ export const BtnBurguer=styled.button`
     height: 30px;
   }
 
-  @media only screen and (${devices.sm}) {
-    display:none;
-  }
+ 
 
 `
 // Define keyframes for the animation
