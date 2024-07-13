@@ -12,6 +12,7 @@ export const ContainerForm = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 2;
   display: ${({ openPortal }) => (openPortal ? "flex" : "none")};
 `;
 
@@ -68,10 +69,13 @@ export const FormPortal = styled.form`
 `;
 
 export const BoxInput = styled.div`
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  @media only screen and (${devices.sm}) {
+    padding: 1rem;
+  }
 `;
 export const LabelInput = styled.label`
   font-family: "DM Sans";

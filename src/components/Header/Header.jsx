@@ -104,7 +104,7 @@ function Header() {
           <ButtonContact onClick={openPortalForm}>Contactame</ButtonContact>
         </ContainerElement>
       </HeaderContainer>
-      <MenuBurguers isclicked={isclicked} handleclose={handleclose} />
+      <MenuBurguers isclicked={isclicked} handleclose={handleclose} openPortalForm={openPortalForm}  />
       <Form  openPortal={openPortal}  openPortalForm={openPortalForm}/>
     </ThemeProvider>
   );

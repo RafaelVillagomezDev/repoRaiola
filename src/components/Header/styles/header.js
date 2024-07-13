@@ -59,6 +59,7 @@ export const ButtonContact = styled.div`
   padding: 16px 35px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
   gap: 10px;
   flex-shrink: 0;
   border-radius: 8px;

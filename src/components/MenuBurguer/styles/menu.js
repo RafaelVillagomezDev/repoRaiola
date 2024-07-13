@@ -1,7 +1,26 @@
 import {styled, keyframes } from "styled-components";
 import { devices } from "../../../styles/mixin_styledComponent";
 import { Link } from "react-router-dom";
-  
+
+export const ButtonContactMobile = styled.div`
+  display: flex;
+  padding: 16px 35px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #009d5c;
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 16px;
+  max-width: 120px;
+  margin: auto;
+  cursor: pointer;
+`;
+
 export const BtnTitle=styled.button`
   background-color: transparent;
   border: none;
@@ -54,6 +73,10 @@ const slideOut = keyframes`
 `;
 /*Menu Burguer*/
 export const MenuBurguer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 50%;
   top: 0;
   left: ${({ isclicked }) => (isclicked ? '0' : '-100%')};
@@ -92,6 +115,8 @@ export const ContainerList = styled.div`
   column-gap: 0.2rem;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
 `;
 export const ListMenu = styled.ul`
    height: 75%;

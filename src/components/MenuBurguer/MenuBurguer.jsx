@@ -14,14 +14,19 @@ import {
   ListMenu,
   LinkPersonalized,
   ContainerLink,
+  ButtonContactMobile,
 } from "./styles/menu";
 
 import logoHeader from "../../../public/assets/icons/logoHeader.png";
 import gmail from "../../../public/assets/icons/gmail.png";
 import linkdn from "../../../public/assets/icons/linkedin.png";
 import whatsapp from "../../../public/assets/icons/whatsapp.png";
+import Form from "../Portals/Form";
+
 
 function MenuBurguers(props) {
+
+
   
   const LinkData = [
     {
@@ -97,9 +102,12 @@ function MenuBurguers(props) {
         </HeaderMenuBurguer>
         <ContainerList>
           <ListMenu>{ElemLink}</ListMenu>
-          <ContainerList>
+        </ContainerList>
+        <ContainerList>
+            <ButtonContactMobile onClick={props.openPortalForm}>Contactame</ButtonContactMobile>
+        </ContainerList>
+        <ContainerList>
             <ContainerLink>{elemLinkFooter}</ContainerLink>
-          </ContainerList>
         </ContainerList>
       </MenuBurguer>
     </>
