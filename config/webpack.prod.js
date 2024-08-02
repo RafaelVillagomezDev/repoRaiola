@@ -2,6 +2,9 @@ const common = require("./webpack.common");
 const path = require("path");
 const { merge } = require("webpack-merge");
 const BrotliPlugin = require('brotli-webpack-plugin');
+
+
+
 const prodConfig = {
   mode: "production",
   devtool: "source-map",
@@ -20,6 +23,7 @@ const prodConfig = {
       threshold: 10240,
       minRatio: 0.8,
     }),
+     
   ],
   optimization: {
     splitChunks: {
