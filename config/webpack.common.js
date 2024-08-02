@@ -1,8 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-
 
 const envPath = path.resolve(__dirname, ".env");
 const envVars = require("dotenv").config({ path: envPath }).parsed || {};
@@ -30,12 +28,7 @@ module.exports = {
       hash: true,
     }),
     new MiniCssExtractPlugin(),
-    new CopyWebpackPlugin({
-      patterns: [
-        { from: './src/robots.txt', to: '../dist' }, 
-        { from: './src/sitemap.xml', to: '../dist' }, 
-      ],
-    }),
+   
   ],
 
   // LOADERS
