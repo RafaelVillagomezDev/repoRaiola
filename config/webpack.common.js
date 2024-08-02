@@ -3,8 +3,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 
+
 const envPath = path.resolve(__dirname, ".env");
-  const envVars = require('dotenv').config({ path: envPath }).parsed || {};
+const envVars = require("dotenv").config({ path: envPath }).parsed || {};
 // Webpack configuration
 module.exports = {
   stats: { children: true },
@@ -16,9 +17,7 @@ module.exports = {
     path: path.join(__dirname, "../dist"),
     filename: "main.bundle-[hash].js",
     clean: true,
-
   },
-  
 
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".html"],
@@ -28,10 +27,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "../public", "index.html"),
       filename: "index.html",
-      hash:true
+      hash: true,
     }),
     new MiniCssExtractPlugin(),
-    
   ],
 
   // LOADERS
@@ -48,22 +46,17 @@ module.exports = {
         test: /\.(pdf)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name: '[name].[ext]',
-              outputPath: 'public/assets/pdf/',
+              name: "[name].[ext]",
+              outputPath: "public/assets/pdf/",
             },
           },
         ],
       },
       {
         test: /\.s?css$/, // archivos .css o .scss
-        use:[
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader"
-        ]
-        
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
         test: /\.(png|jpg|gif)$/,

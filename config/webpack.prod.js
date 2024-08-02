@@ -1,6 +1,7 @@
 const common = require("./webpack.common");
 const path = require("path");
 const { merge } = require("webpack-merge");
+const BrotliPlugin = require('brotli-webpack-plugin');
 const prodConfig = {
   mode: "production",
   devtool: "source-map",
@@ -12,6 +13,14 @@ const prodConfig = {
     chunkFilename: "[name].[contenthash].chunk.js", // Nombre único para fragmentos
     path: path.resolve(__dirname, "../dist"),
   },
+  plugins: [
+    new BrotliPlugin({
+      asset: "[path].br[query]",
+      test: /\.(js|css|html|svg|scss)$/,
+      threshold: 10240,
+      minRatio: 0.8,
+    }),
+  ],
   optimization: {
     splitChunks: {
       minSize: 17000,
