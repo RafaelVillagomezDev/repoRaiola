@@ -27,8 +27,8 @@ const prodConfig = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: './public/robots.txt', to: './public' }, 
-        { from: './public/sitemap.xml', to: './public' }, 
+        { from: './public/robots.txt', to: '' }, 
+        { from: './public/sitemap.xml', to: '' }, 
       ],
     }),
      
