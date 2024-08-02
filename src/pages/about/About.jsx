@@ -17,6 +17,8 @@ const CardAboutPage = lazy(() => import("../../components/CardAboutPage/CardAbou
 import { IoArrowBack } from "react-icons/io5";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import fondo from "../../../public/assets/img/fondo.png";
+import { Helmet } from 'react-helmet-async';
+
 
 function About() {
   function historyGoBack() {
@@ -25,6 +27,14 @@ function About() {
 
   return (
     <Suspense fallback={<LoadingScreen />}>
+     <Helmet>
+     <title>Yandry | Desarrollador Web en Madrid, España - Innovación y Trabajo en Equipo</title>
+      <meta name="description" content="Soy Yandry, un desarrollador web en Madrid, España, apasionado por el trabajo en equipo y la innovación en el desarrollo de productos digitales. Constantemente aprendo y aplico nuevas tendencias para crear aplicaciones útiles." />
+      <meta name="keywords" content="desarrollador web, trabajo en equipo, tendencias de desarrollo web, feedback en proyectos, aplicaciones útiles, Madrid, España, innovación en software, Yandry,web, APIs, React, Node.js, PHP, Python, SQL, MySQL, Docker, frontend" />
+      <link rel="canonical" href="https://yandrydev.es" />
+      <link rel="icon" href="https://yandrydev.es/favicon.ico" />
+      <meta name="robots" content="index, follow" />
+    </Helmet>
       <Header />
       <ContainerAbout>
         <BoxAbout>

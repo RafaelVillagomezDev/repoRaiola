@@ -67,7 +67,7 @@ function Card() {
         return (
           <SwiperSlide className="swiper-slide">
             <CardWrapper key={slide.id} className="yandry">
-              <CardImage background={slide.thumbnail} />
+              <CardImage background={slide.thumbnail} alt={slide.alt} />
               <CardTextWrapper>
                 <CardTextDate>{slide.title} #{slide.id}</CardTextDate>
                 <CardTextTitle></CardTextTitle>

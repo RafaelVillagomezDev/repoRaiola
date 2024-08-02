@@ -25,7 +25,7 @@ function Skills() {
         {cardSkills.map((card) => {
           return (
             <CardSkill  key={card.id}> 
-              <LazyLoadImage key={card.id} src={card.thumbnail} />
+              <LazyLoadImage key={card.id} src={card.thumbnail} alt={card.title}/>
               <CardTitle>{card.title}</CardTitle>
               <CardText>
                {card.text}
