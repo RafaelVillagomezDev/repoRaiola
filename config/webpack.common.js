@@ -1,7 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
 const envPath = path.resolve(__dirname, ".env");
@@ -24,12 +23,6 @@ module.exports = {
   },
 
   plugins: [
-    new CopyWebpackPlugin({
-      patterns: [
-        {from: path.resolve(__dirname, '../public/assets/robots.txt'), to: 'public'},
-        {from: path.resolve(__dirname, '../public/assets/sitemap.xml'), to: 'public'},
-      ],
-    }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "../public", "index.html"),
       filename: "index.html",
