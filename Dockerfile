@@ -31,14 +31,16 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copia la configuración de Nginx
 COPY .nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copia los archivos estáticos construidos desde la etapa de build
-COPY --from=build /app/dist /usr/share/nginx/html/
-
 COPY public/robots.txt /usr/share/nginx/html/robots.txt
 COPY public/sitemap.xml /usr/share/nginx/html/sitemap.xml
 
 # Copy Indexado
 RUN chmod 644 /usr/share/nginx/html/robots.txt /usr/share/nginx/html/sitemap.xml
+
+
+# Copia los archivos estáticos construidos desde la etapa de build
+COPY --from=build /app/dist /usr/share/nginx/html/
+
 
 
 # Copia los certificados SSL a la ubicación correcta
