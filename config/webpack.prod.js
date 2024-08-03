@@ -2,8 +2,6 @@ const common = require("./webpack.common");
 const path = require("path");
 const { merge } = require("webpack-merge");
 const BrotliPlugin = require('brotli-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-
 
 
 
@@ -24,14 +22,7 @@ const prodConfig = {
       test: /\.(js|css|html|svg|scss)$/,
       threshold: 10240,
       minRatio: 0.8,
-    }),
-    new CopyWebpackPlugin({
-      patterns: [
-        {from: path.resolve(__dirname, '../public/assets/robots.txt'), to: ''},
-        {from: path.resolve(__dirname, '../public/assets/sitemap.xml'), to: ''},
-      ],
-    }),
-     
+    }),   
   ],
   optimization: {
     splitChunks: {
