@@ -21,17 +21,20 @@ function Footer() {
       id: 1,
       enlace: "mailto:yandry75@gmail.com?Subject=Oferta%20de%20trabajo%20",
       contentUrl: gmail,
+      label:"Ir a email"
     },
     {
       id: 2,
       enlace: "https://www.linkedin.com/in/rafaelvillagomez/",
       contentUrl: linkdn,
+      label:"Ir a linkdln"
     },
     {
       id: 3,
       enlace:
         "https://wa.me/618152241?text=Hola%20Yandry%20me%20gustaria%20hablar%20de%20trabajo%20",
       contentUrl: whatsapp,
+      label:"Ir a whatsapp"
     },
   ];
 
@@ -42,6 +45,7 @@ function Footer() {
         key={element.id}
         contentUrl={element.contentUrl}
         target="_blank"
+        aria-label={element.label}
       >
         {element.contentUrl}
       </LinkPersonalized>
@@ -57,26 +61,28 @@ function Footer() {
           </FooterColumn>
           <FooterColumn>
             <FooterTitleNav>Inicio</FooterTitleNav>
-            <FooterText target="_blank" to="/about">
-              Acerca de mi
+            <FooterText  aria-label="Ir a acerca de mí" target="_blank" to="/about">
+              Acerca de mí
             </FooterText>
-            <FooterText target="_blank" to="/proyects">
+            <FooterText  aria-label="Ir a proyectos" target="_blank" to="/proyects">
               Proyectos
             </FooterText>
           </FooterColumn>
           <FooterColumn>
             <FooterTitleNav>Contáctame</FooterTitleNav>
             <FooterText
+              aria-label="Abrir email"
               target="_blank"
               to="mailto:yandry75@gmail.com?Subject=Oferta%20de%20trabajo%20"
             >
               Correo
             </FooterText>
             <FooterText
+              aria-label="Abrir linkdln"
               target="_blank"
               to="https://www.linkedin.com/in/rafaelvillagomez/"
             >
-              Linkdn
+              Linkdln
             </FooterText>
           </FooterColumn>
           <FooterColumn>

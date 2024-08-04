@@ -11,7 +11,7 @@ function Main() {
   return (
     <Suspense fallback={<LoadingScreen/>}>
      <Helmet>
-     <title>Yandry | Portafolio de Desarollador web - Desarrollo Web, Fronted y Fullstack</title>
+     <title>Yandry | Home</title>
       <meta name="description" content="Esta es la home page" />
      
       <meta name="description" content="Explora mi porfolio Yandry, un ingeniero de software especializado en desarrollo web, aplicaciones web, diseño responsive, node js , api , endpoint. Descubre mis proyectos y habilidades en yandrydev.es." />

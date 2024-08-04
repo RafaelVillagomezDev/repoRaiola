@@ -13,7 +13,7 @@ export default function ErrorPage() {
   return (
     <div id="error-page">
      <Helmet>
-     <title>404 | Página No Encontrada - Yandry Dev</title>
+     <title>404 | Página No Encontrada </title>
       <meta name="description" content="La página que buscas no se encuentra disponible. Explora el portafolio de Yandry, un ingeniero de software especializado en desarrollo web y aplicaciones web." />
       <meta name="keywords" content="404, página no encontrada, error, ingeniero de software, desarrollador web, portafolio, desarrollo web, aplicaciones web" />
       <link rel="canonical" href="https://yandrydev.es/404" />

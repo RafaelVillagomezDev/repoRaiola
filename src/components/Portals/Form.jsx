@@ -98,7 +98,7 @@ function Form(props) {
             />
           </BoxInput>
           <BoxInput>
-            <InputSubmit type="submit" onClick={submitEmail} value={"Enviar"} />
+            <InputSubmit aria-label="Enviar formulario" type="submit" onClick={submitEmail} value={"Enviar"} />
           </BoxInput>
         </FormPortal>
       </BoxPortal>

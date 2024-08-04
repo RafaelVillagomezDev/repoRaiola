@@ -17,7 +17,7 @@ import {
   ButtonContactMobile,
 } from "./styles/menu";
 
-import logoHeader from "../../../public/assets/icons/logoHeader.png";
+
 import gmail from "../../../public/assets/icons/gmail.png";
 import linkdn from "../../../public/assets/icons/linkedin.png";
 import whatsapp from "../../../public/assets/icons/whatsapp.png";
@@ -38,7 +38,7 @@ function MenuBurguers(props) {
     {
       id: "about",
       enlace: "/about",
-      name: "Acerca de mi",
+      name: "Acerca de mí",
       icon: <FaFingerprint />,
     },
     {
@@ -66,17 +66,20 @@ function MenuBurguers(props) {
       id: "gmail",
       enlace: "mailto:yandry75@gmail.com?Subject=Oferta%20de%20trabajo%20",
       contenturl: gmail,
+      label:"Ir a gmail"
     },
     {
       id: "linkdn",
       enlace: "https://www.linkedin.com/in/rafaelvillagomez/",
       contenturl: linkdn,
+      label:"Ir a linkdln"
     },
     {
       id: "whatsapp",
       enlace:
         "https://wa.me/618152241?text=Hola%20Yandry%20me%20gustaria%20hablar%20de%20trabajo%20",
       contenturl: whatsapp,
+      label:"Ir a whatsapp"
     },
   ];
 
@@ -86,6 +89,7 @@ function MenuBurguers(props) {
         to={element.enlace}
         key={element.id}
         contenturl={element.contenturl}
+        aria-label={element.label}
       >
         {element.contentUrl}
       </LinkPersonalized>
@@ -96,7 +100,7 @@ function MenuBurguers(props) {
     <>
       <MenuBurguer isclicked={props.isclicked ? props.isclicked  : undefined}>
         <HeaderMenuBurguer>
-          <BtnCloseMenu  onClick={props.handleclose ? props.handleclose  : undefined}>
+          <BtnCloseMenu  aria-label="Cierra menu contacto" onClick={props.handleclose ? props.handleclose  : undefined}>
             <FaX style={{ color: "#FFF" }} size={"18px"} />
           </BtnCloseMenu>
         </HeaderMenuBurguer>
@@ -104,7 +108,7 @@ function MenuBurguers(props) {
           <ListMenu>{ElemLink}</ListMenu>
         </ContainerList>
         <ContainerList>
-            <ButtonContactMobile onClick={props.openPortalForm}>Contactame</ButtonContactMobile>
+            <ButtonContactMobile  aria-label="Abrir menu modal contacto" onClick={props.openPortalForm}>Contáctame</ButtonContactMobile>
         </ContainerList>
         <ContainerList>
             <ContainerLink>{elemLinkFooter}</ContainerLink>

@@ -34,9 +34,9 @@ function Skills() {
           );
         })}
       </CarrousellSkills>
-      <LinkSkills  key="more_skills" to="/about" >
+      <LinkSkills  aria-label="Ir a acerca de mí"  key="more_skills" to="/about" >
         <ButtonTitle>
-          Ver mas skills <FaArrowRight />
+          Ver más skills <FaArrowRight />
         </ButtonTitle>
       </LinkSkills>
     </ContainerSkills>
@@ -55,9 +55,9 @@ function Skills() {
           );
         })}
       </CarrousellSkills>
-      <LinkSkills  key="more_skills" to="/about">
+      <LinkSkills  aria-label="Ir a acerca de mí"  key="more_skills" to="/about">
         <ButtonTitle>
-          Ver mas lenguajes <FaArrowRight />
+          Ver más lenguajes <FaArrowRight />
         </ButtonTitle>
       </LinkSkills>
     </ContainerSkills>

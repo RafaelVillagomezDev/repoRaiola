@@ -23,6 +23,6 @@ export const languageSkills = [
     title: "React",
     alt:"Imagen React",
     thumbnail: react,
-    text: `Me gusta React por su capacidad para crear web dinámicas con componentes reutilizables. Su Virtual DOM optimiza el rendimiento y desarrollo`,
+    text: `Me gusta React por su capacidad para crear web dinámicas con componentes reutilizables. Su Virtual DOM optimiza el rendimiento y desarrollo.`,
   },  
 ];

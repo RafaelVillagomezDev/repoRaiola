@@ -18,9 +18,9 @@ function Proyects() {
           );
         })}
       </ProyectContainer>
-      <LinkSkills to="/proyects" key="more_proyects">
+      <LinkSkills aria-label="Ir a proyectos" to="/proyects" key="more_proyects">
         <ButtonTitle >
-          Ver mas proyectos <FaArrowRight />
+          Ver más proyectos <FaArrowRight />
         </ButtonTitle>
       </LinkSkills>
     </>

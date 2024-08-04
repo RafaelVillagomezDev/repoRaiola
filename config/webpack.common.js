@@ -1,7 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const envPath = path.resolve(__dirname, ".env");
 const envVars = require("dotenv").config({ path: envPath }).parsed || {};
@@ -29,7 +29,7 @@ module.exports = {
       hash: true,
     }),
     new MiniCssExtractPlugin(),
-   
+    new FaviconsWebpackPlugin('public/assets/icons/yandrydev.png') 
   ],
 
   // LOADERS

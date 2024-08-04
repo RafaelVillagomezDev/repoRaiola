@@ -46,12 +46,14 @@ function Header() {
       id: "inicio",
       name: "Inicio",
       enlace: "/home",
+      label:"Ir a home",
       contentUrl: gmail,
     },
     {
       id: "acerca",
       name: "Acerca de mi",
       enlace: "/about",
+      label:"Ir a about",
       contentUrl: linkdn,
     },
     {
@@ -59,6 +61,7 @@ function Header() {
       name: "Proyectos",
       enlace:
         "/about",
+      label:"Ir a proyectos",
       contentUrl: whatsapp,
     },
   ];
@@ -67,7 +70,7 @@ function Header() {
 
   const elemLink = LinkData.map((element) => {
     return (
-      <LinkPersonalized to={element.enlace} key={element.id}>
+      <LinkPersonalized  aria-label={element.label} to={element.enlace} key={element.id}>
         {element.name}
       </LinkPersonalized>
     );
@@ -82,7 +85,7 @@ function Header() {
       <GlobalStyles />
       <HeaderContainer>
         <ContainerElement>
-          <BtnBurguer onClick={handleclose}>
+          <BtnBurguer onClick={handleclose} aria-label="Abrir menu">
             <FaBars style={{ color: "#FFF" }} size={"18px"} />
           </BtnBurguer>
         </ContainerElement>
@@ -91,8 +94,9 @@ function Header() {
         <ContainerElement>
         </ContainerElement>
         <ContainerElement>
-          <Label>
+          <Label htmlFor="checkbox-mode_dark">
             <Input
+              aria-label="Cambios modo oscuro"
               id="checkbox-mode_dark"
               checked={checked}
               onClick={themeToggler}
@@ -101,7 +105,7 @@ function Header() {
             />
             <Switch />
           </Label>
-          <ButtonContact onClick={openPortalForm}>Contactame</ButtonContact>
+          <ButtonContact onClick={openPortalForm} aria-label="Abre modal contacto">Contactame</ButtonContact>
         </ContainerElement>
       </HeaderContainer>
       <MenuBurguers isclicked={isclicked} handleclose={handleclose} openPortalForm={openPortalForm}  />

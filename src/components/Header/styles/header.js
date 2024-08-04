@@ -13,6 +13,9 @@ export const HeaderContainer = styled.div`
   justify-content: center;
   align-items: center;
   justify-content: space-evenly;
+  position: sticky;
+  position: -webkit-sticky; /* For Safari */
+  top: 0;
 `;
 
 export const ContainerElement = styled.div`
