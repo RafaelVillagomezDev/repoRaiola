@@ -1,6 +1,6 @@
 export function sendEmail(token) {
     return new Promise((resolve, reject) => {
-      const url = "http://yandrydev.es:3000/api/v1/send";
+      const url = "https://yandrydev.es/api/v1/send";
      
       
       fetch(url, {

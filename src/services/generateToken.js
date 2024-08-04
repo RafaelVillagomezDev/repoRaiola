@@ -1,6 +1,6 @@
 export function generateToken(dataSend) {
     return new Promise((resolve, reject) => {
-      const url = "http://yandrydev.es:3000/api/v1/generateToken";
+      const url = "https://yandrydev.es/api/v1/generateToken";
       const {email,subject,messague}=dataSend
       const data = {
         email,
