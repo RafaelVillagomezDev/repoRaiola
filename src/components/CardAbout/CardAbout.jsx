@@ -1,7 +1,7 @@
 import React from "react";
 import { CardAboutBox, CardAboutContainer, CardAboutLeft, CardAboutRight, CardAboutText, CardAboutTitle, CardButton } from "./styles/CardAbout";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import fondo from "../../../public/assets/img/fondo.png"
+import fondo from "../../../public/assets/img/fondo.webp"
 function CardAbout() {
   return (
     <CardAboutContainer>

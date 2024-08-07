@@ -1,5 +1,5 @@
 import React from "react";
-import responsive from "../../../public/assets/icons/responsive_icon.png";
+import responsive from "../../../public/assets/icons/responsive_icon.webp";
 import {
   ButtonTitle,
   CardSkill,

@@ -16,9 +16,9 @@ import { BtnBurguer} from "../MenuBurguer/styles/menu"
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../globalStyles";
 import { lightTheme, darkTheme } from "../Theme";
-import gmail from "../../../public/assets/icons/gmail.png";
-import linkdn from "../../../public/assets/icons/linkedin.png";
-import whatsapp from "../../../public/assets/icons/whatsapp.png";
+import gmail from "../../../public/assets/icons/gmail.webp";
+import linkdn from "../../../public/assets/icons/linkedin.webp";
+import whatsapp from "../../../public/assets/icons/whatsapp.webp";
 import MenuBurguers from "../MenuBurguer/MenuBurguer";
 import { BtnTitle } from "../MenuBurguer/styles/menu";
 import { FaBars } from "react-icons/fa6";

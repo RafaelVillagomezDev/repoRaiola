@@ -1,6 +1,6 @@
-import sql from "../../../../public/assets/icons/about/sql.png"
-import mysql from "../../../../public/assets/icons/about/mysql.png";
-import mongo from "../../../../public/assets/icons/about/mongo.png";
+import sql from "../../../../public/assets/icons/about/sql.webp"
+import mysql from "../../../../public/assets/icons/about/mysql.webp";
+import mongo from "../../../../public/assets/icons/about/mongo.webp";
 
 
 export const bdContent = [

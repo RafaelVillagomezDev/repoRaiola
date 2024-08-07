@@ -1,9 +1,9 @@
-import coworking from "../../../../public/assets/about/coworking.png";
-import code from "../../../../public/assets/about/code.png";
-import collection from "../../../../public/assets/about/collection.png";
-import device from "../../../../public/assets/about/device.png";
-import speakerphone from "../../../../public/assets/about/speakerphone.png";
-import stucture from "../../../../public/assets/about/stucture_icon.png";
+import coworking from "../../../../public/assets/about/coworking.webp";
+import code from "../../../../public/assets/about/code.webp";
+import collection from "../../../../public/assets/about/collection.webp";
+import device from "../../../../public/assets/about/device.webp";
+import speakerphone from "../../../../public/assets/about/speakerphone.webp";
+import stucture from "../../../../public/assets/about/stucture_icon.webp";
 
 export const contentSkills = [
   {

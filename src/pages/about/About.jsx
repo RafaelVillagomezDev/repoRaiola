@@ -18,7 +18,7 @@ const CardAboutPage = lazy(() =>
 );
 import { IoArrowBack } from "react-icons/io5";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import fondo from "../../../public/assets/img/fondo.png";
+import fondo from "../../../public/assets/img/fondo.webp";
 import { Helmet } from "react-helmet-async";
 
 function About() {

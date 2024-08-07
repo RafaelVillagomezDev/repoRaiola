@@ -1,8 +1,4 @@
-import cloudDrop from "../public/assets/proyects/cloud_drop.png"
-import react from "../public/assets/img/fondo_1.jpg"
-import mysql from "../public/assets/img/fondo_1.jpg"
-
-
+import cloudDrop from "../public/assets/proyects/cloud_drop.webp"
 
 export const proyects = [
   {

@@ -1,6 +1,6 @@
-import responsive from "../../../../public/assets/icons/responsive_icon.png";
-import stucture from "../../../../public/assets/icons/stucture_icon.png";
-import coworking from "../../../../public/assets/icons/coworking_icon.png";
+import responsive from "../../../../public/assets/icons/responsive_icon.webp";
+import stucture from "../../../../public/assets/icons/stucture_icon.webp";
+import coworking from "../../../../public/assets/icons/coworking_icon.webp";
 
 export const cardSkills = [
   {

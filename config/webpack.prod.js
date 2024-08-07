@@ -19,7 +19,7 @@ const prodConfig = {
   plugins: [
     new BrotliPlugin({
       asset: "[path].br[query]",
-      test: /\.(js|css|html|svg|scss)$/,
+      test: /\.(js|css|html|svg|scss|woff|woff2|ttf|eot|webp)$/,
       threshold: 10240,
       minRatio: 0.8,
     }),   

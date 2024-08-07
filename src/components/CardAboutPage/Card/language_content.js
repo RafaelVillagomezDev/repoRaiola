@@ -1,11 +1,11 @@
-import css from "../../../../public/assets/icons/about/css.png";
-import php from "../../../../public/assets/icons/about/php.png";
-import js from "../../../../public/assets/icons/about/js.png";
-import node from "../../../../public/assets/icons/about/node.png";
-import react from "../../../../public/assets/icons/about/react.png";
-import python from "../../../../public/assets/icons/about/piton.png";
-import express from "../../../../public/assets/icons/about/express.png";
-import redux from "../../../../public/assets/icons/about/redux.png";
+import css from "../../../../public/assets/icons/about/css.webp";
+import php from "../../../../public/assets/icons/about/php.webp";
+import js from "../../../../public/assets/icons/about/js.webp";
+import node from "../../../../public/assets/icons/about/node.webp";
+import react from "../../../../public/assets/icons/about/react.webp";
+import python from "../../../../public/assets/icons/about/piton.webp";
+import express from "../../../../public/assets/icons/about/express.webp";
+import redux from "../../../../public/assets/icons/about/redux.webp";
 
 export const languageSkills = [
   {

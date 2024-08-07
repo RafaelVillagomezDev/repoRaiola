@@ -29,7 +29,7 @@ module.exports = {
       hash: true,
     }),
     new MiniCssExtractPlugin(),
-    new FaviconsWebpackPlugin('public/assets/icons/yandrydev.png') 
+    new FaviconsWebpackPlugin('public/assets/icons/yandrydev.webp') 
   ],
 
   // LOADERS
@@ -63,11 +63,12 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|webp)$/,
         use: [
           {
             loader: "file-loader",
-            options: { name: "public/assets/img/[hash].[ext]" },
+            options: { name: "public/assets/img/[hash].[ext]"
+           },
           },
         ],
       },

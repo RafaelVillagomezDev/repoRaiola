@@ -1,6 +1,6 @@
-import js from "../../../../public/assets/icons/about/js.png";
-import node from "../../../../public/assets/icons/about/node.png";
-import react from "../../../../public/assets/icons/about/react.png";
+import js from "../../../../public/assets/icons/about/js.webp";
+import node from "../../../../public/assets/icons/about/node.webp";
+import react from "../../../../public/assets/icons/about/react.webp";
 
 
 export const languageSkills = [

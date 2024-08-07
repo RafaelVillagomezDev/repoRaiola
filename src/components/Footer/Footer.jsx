@@ -11,9 +11,9 @@ import {
   LinkPersonalized,
   LinkTel,
 } from "./styles/Footer";
-import gmail from "../../../public/assets/icons/gmail.png";
-import linkdn from "../../../public/assets/icons/linkedin.png";
-import whatsapp from "../../../public/assets/icons/whatsapp.png";
+import gmail from "../../../public/assets/icons/gmail.webp";
+import linkdn from "../../../public/assets/icons/linkedin.webp";
+import whatsapp from "../../../public/assets/icons/whatsapp.webp";
 
 function Footer() {
   const LinkData = [

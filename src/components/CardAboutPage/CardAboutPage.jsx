@@ -12,7 +12,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { contentSkills } from "./Card/content";
 import { languageSkills } from "./Card/language_content";
 import { bdContent} from "./Card/bd_content";
-import star  from "../../../public/assets/icons/about/star.png";
+import star  from "../../../public/assets/icons/about/star.webp";
 
 
 function CardAboutPage() {
