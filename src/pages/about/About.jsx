@@ -29,9 +29,7 @@ function About() {
   return (
     <Suspense fallback={<LoadingScreen />}>
       <Helmet>
-        <title>
-          Yandry | Acerca de mí
-        </title>
+        <title>Yandry | Acerca de mí</title>
         <meta
           name="description"
           content="Soy Yandry, un desarrollador web en Madrid, España, apasionado por el trabajo en equipo y la innovación en el desarrollo de productos digitales. Constantemente aprendo y aplico nuevas tendencias para crear aplicaciones útiles."
@@ -61,7 +59,7 @@ function About() {
             <CardMeLeft>
               <TitleAbout> Yandry Villa</TitleAbout>
               <TextAbout>
-                Soy Desarrollador Web, actualmente vivo en Madrid, España. Me
+                Soy Desarrollador Web y actualmente vivo en Madrid, España. Me
                 agrada la idea de trabajar en equipo, pienso que es una manera
                 de conectar con nuevas habilidades y de brindar mi conocimiento
                 al equipo, con el fin de mejorar la productividad en el
@@ -69,7 +67,7 @@ function About() {
                 nuevas a diario y ser un activo valioso en cualquier equipo en
                 el que me desarrolle. Por este motivo estoy aprendiendo
                 constantemente e investigando acerca de las nuevas tendencias.
-                Trato de buscar todo el Feedback posible en los proyectos, con
+                Trato de buscar todo el feedback posible en los proyectos, con
                 el fin de mejorar y poder hacer aplicaciones que ayuden a las
                 personas.
               </TextAbout>
@@ -77,7 +75,7 @@ function About() {
               <TextAbout>
                 ¡Hablemos!
                 <TextLink
-                aria-label="Ir a email"
+                  aria-label="Ir a email"
                   to="mailto:yandry75@gmail.com?Subject=Oferta%20de%20trabajo%20"
                   key="mailto_mail"
                 >

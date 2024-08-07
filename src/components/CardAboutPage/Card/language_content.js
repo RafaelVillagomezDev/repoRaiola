@@ -12,7 +12,8 @@ export const languageSkills = [
     id: 1,
     title: "Vanilla Javascript",
     thumbnail: js,
-    text: `Tengo más de dos años usando Vanilla JavaScript y me encanta por su versatilidad y capacidad que ofrece.`,
+    text: `Tengo más de dos años de experiencia en el uso de Vanilla JavaScript y me encanta por
+    su versatilidad y capacidad que ofrece.`,
   },
   {
     id: 2,
@@ -30,7 +31,9 @@ export const languageSkills = [
     id: 4,
     title: "Node.js",
     thumbnail: node,
-    text: `Node.js me apasiona por su capacidad de crear aplicaciones web escalables.Además su versatilidad, permitiendo utilizar JavaScript tanto en el frontend como en el backend.`,
+    text: `Node.js me apasiona por su capacidad de crear aplicaciones web escalables. Además,
+    su versatilidad, permitiendo utilizar JavaScript tanto en el Front-end como en el Back-
+    end .`,
   },
   {
     id: 5,
@@ -42,13 +45,15 @@ export const languageSkills = [
     id: 6,
     title: "Python",
     thumbnail: python,
-    text: `Python me parece un lenguaje sorprendente gracias a su fácil curva de aprendizaje. Su amplia gama de bibliotecas y recursos que ofrece.`,
+    text: `Python me parece un lenguaje sorprendente gracias a su fácil curva de aprendizaje, su
+    amplia gama de bibliotecas y recursos que ofrece.`,
   },
   {
     id: 7,
     title: "Express",
     thumbnail: express,
-    text: `Su agilidad para  el desarrollo de aplicaciones web backend. Su diseño simplificado y de middleware hacen de Express una excelente opción para proyectos backend.`,
+    text: `Su agilidad para el desarrollo de aplicaciones web Back-end. Su diseño simplificado y
+    de middleware hacen de Express una excelente opción para proyectos Back-end.`,
   },
   {
     id: 8,
@@ -56,5 +61,4 @@ export const languageSkills = [
     thumbnail: redux,
     text: `Redux radica en su capacidad para gestionar el estado de manera predecible en aplicaciones JavaScript, facilitando la escalabilidad y el mantenimiento del código. Este garantiza una gestión eficiente del estado.`,
   },
-  
 ];

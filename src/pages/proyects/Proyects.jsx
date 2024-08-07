@@ -16,7 +16,7 @@ function About() {
       </Helmet>
       <Header />
       <ContainerProyects>
-        <h1>Proximamente ..</h1>
+        <h1>Próximamente ..</h1>
       </ContainerProyects>
     </>
   );

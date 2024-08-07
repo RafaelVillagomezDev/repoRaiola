@@ -80,8 +80,8 @@ function Content() {
               </PortadaTitle>
               <PortadaTitle>Desarrollador Web</PortadaTitle>
               <PortadaContent>
-                Un desarrollador web que construye el frontend y backend de sitios y
-                aplicaciones web que conducen al éxito.
+                 Un desarrollador web que construye el Front-end y Back-end de sitios y aplicaciones
+                 web que conducen al éxito.
               </PortadaContent>
               <ContainerBtn>
                 <PortadaButton aria-label="Ir a proyectos"  key={"proyectos"} to={"/proyects"}>

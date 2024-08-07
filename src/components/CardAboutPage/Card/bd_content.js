@@ -14,13 +14,17 @@ export const bdContent = [
     id: 2.2,
     title: `MySql`,
     thumbnail: mysql,
-    text: `Lo mejor de MySQL es su confiabilidad, velocidad y escalabilidad, lo que lo convierte en una opción robusta para gestionar grandes volúmenes de datos.Ademas de su amplia comunidad.`,
+    text: `Lo mejor de MySQL es su confiabilidad, velocidad y escalabilidad, lo que lo convierte
+    en una opción robusta para gestionar grandes volúmenes de datos. No hay que
+    olvidarse de su amplia comunidad.`,
   },
   {
     id: 3.2,
     title: "Mongo",
     thumbnail: mongo,
-    text: `Su capacidad para manejar datos no estructurados y semi-estructurados facilita el desarrollo ágil.Su modelo de documentos JSON y su capacidad para distribuir datos en clústeres.`,
+    text: `Su capacidad para manejar datos no estructurados y semi-estructurados facilita el
+    desarrollo ágil.Su modelo de documentos JSON y su capacidad para distribuir datos en
+    clústeres.`,
   },
 
 ];
