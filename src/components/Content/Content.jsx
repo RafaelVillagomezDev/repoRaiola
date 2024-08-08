@@ -29,7 +29,7 @@ import {
 } from "./styles/Content";
 
 import { IoArrowBack } from "react-icons/io5";
-import cv from "../../../public/assets/pdf/cv_yandry_villagomez.pdf";
+import cv from "../../../public/assets/pdf/cv_yandry_villagomez_2024.pdf";
 import CardAbout from "../CardAbout/CardAbout";
 import Skills from "../Skills/Skills";
 import Proyects from "../Proyects/Proyects";
