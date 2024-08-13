@@ -18,7 +18,7 @@ export function generateToken(dataSend) {
       })
         .then((res) => {
           if (!res.ok) {
-            throw new Error("La respuesta de la red no fue exitosa");
+            throw new Error(res.messague);
           }
           return res.json();
         })

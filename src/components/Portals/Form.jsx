@@ -1,9 +1,11 @@
 import React, { lazy, useState } from "react";
+import DOMPurify from 'dompurify';
 import {
   BoxInput,
   BoxPortal,
   BtnClosePortal,
   ContainerForm,
+  ErrorMessague,
   FormPortal,
   InputArea,
   InputPortal,
@@ -26,16 +28,61 @@ function Form(props) {
     messague: "",
   });
 
+
+  const [errors, setErrors] = useState({});
+
   const MySwal = withReactContent(Swal);
+
+  const regexPatterns =  [
+    {
+      field: 'email',
+      regex: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, // Formato estándar de correo electrónico
+      msg: 'El formato del correo electrónico es inválido.'
+    },
+    {
+      field: 'subject',
+      regex: /^[A-Za-z0-9]*$/, 
+      msg: 'El asunto debe tener numeros o letras , no se permiten caracteres especiales.'
+    },
+    {
+      field: 'messague',
+      regex: /^[A-Za-z0-9!@#$%^&*()_+{}\[\]:;"'<>,.?\/\\|-]{8,}$/
+      , 
+      msg: 'El mensaje debe tener al menos 8 caracteres.'
+    }
+  ];
+  
+  const validateField = (name, value) => {
+    const pattern = regexPatterns.find(rule => rule.field === name);
+
+    if (pattern && value.length>0 ) {
+      return pattern.regex.test(value) ? '' : pattern.msg;
+    }
+    return '';
+  };
 
   // Función para manejar cambios en los campos del formulario
   const handleChange = (event) => {
     const { name, value } = event.target;
+    
+     // Validar el campo actual
+     const errorMsg = validateField(name, DOMPurify.sanitize(value));
 
-    setFormData((prevValues) => ({
-      ...prevValues,
-      [name]: value,
-    }));
+     // Actualizar los errores
+     setErrors((prevErrors) => ({
+       ...prevErrors,
+       [name]: errorMsg,
+     }));
+
+    
+
+   
+     setFormData((prevValues) => ({
+       ...prevValues,
+       [name]: value,
+     }));
+   
+
   };
 
   const submitEmail = async (event) => {
@@ -77,6 +124,7 @@ function Form(props) {
               autoComplete="email"
               id="email"
             />
+             { errors.email && <ErrorMessague>{errors.email}</ErrorMessague>}
           </BoxInput>
           <BoxInput>
             <LabelInput htmlFor="subject">Asunto</LabelInput>
@@ -87,6 +135,7 @@ function Form(props) {
               value={formData.subject}
               onChange={handleChange}
             />
+             { errors.subject && <ErrorMessague>{errors.subject}</ErrorMessague>}
           </BoxInput>
           <BoxInput>
             <LabelInput htmlFor="messague">Mensaje</LabelInput>
@@ -96,6 +145,7 @@ function Form(props) {
               value={formData.messague}
               onChange={handleChange}
             />
+             {errors.messague && <ErrorMessague>{errors.messague}</ErrorMessague>}
           </BoxInput>
           <BoxInput>
             <InputSubmit aria-label="Enviar formulario" type="submit" onClick={submitEmail} value={"Enviar"} />

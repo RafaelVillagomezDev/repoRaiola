@@ -2,6 +2,13 @@ import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 import { devices } from "../../../styles/mixin_styledComponent";
 
+
+export const ErrorMessague=styled.span`
+  font-size: 16px;
+  color: red;
+
+`
+
 export const ContainerForm = styled.div`
   position: fixed;
   top: 0;
@@ -50,7 +57,7 @@ export const BoxPortal = styled.div`
     height: 100%;
   }
   @media only screen and (${devices.sm}) {
-    height: 500px;
+    height: 570px;
   }
 `;
 

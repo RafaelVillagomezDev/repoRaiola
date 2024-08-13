@@ -10,9 +10,11 @@ export function sendEmail(token) {
           "secret-key": token.token
         },
       })
-        .then((res) => {
-          if (!res.ok) {
-            throw new Error("La respuesta de la red no fue exitosa");
+        .then((response) => {
+          if (!response.ok) {
+            const errorMessages = response.errors.map(error => error.msg);
+            const concatenatedMessages = errorMessages.join(',  ');
+            throw new Error(concatenatedMessages);
           }
           return res.json();
         })
