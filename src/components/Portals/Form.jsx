@@ -46,8 +46,7 @@ function Form(props) {
     },
     {
       field: 'messague',
-      regex: /^[A-Za-z0-9!@#$%^&*()_+{}\[\]:;"'<>,.?\/\\|-]{8,}$/
-      , 
+      regex: /^[A-Za-z0-9 !@#$%^&*()_+{}\[\]:;"'<>,.?\/\\|-]{8,}$/, 
       msg: 'El mensaje debe tener al menos 8 caracteres.'
     }
   ];
