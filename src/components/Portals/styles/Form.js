@@ -85,6 +85,7 @@ export const BoxInput = styled.div`
   }
 `;
 export const LabelInput = styled.label`
+
   font-family: "DM Sans";
   font-size: 16px;
   font-style: normal;
@@ -94,18 +95,24 @@ export const LabelInput = styled.label`
 `;
 
 export const InputPortal = styled.input`
+  -webkit-user-select: auto;     /* Permite la selección de texto dentro del input */
+  -webkit-touch-callout: default; /* Permite el menú contextual en dispositivos táctiles */
+  -webkit-appearance: none;   
   border-radius: 8px;
   border: 1px solid #a0a0a1;
   padding: 16px 20px;
   background: #1f1f21;
   font-family: "DM Sans";
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0.44px;
   color: white;
 `;
 export const InputSubmit = styled.input`
+  -webkit-user-select: auto;     /* Permite la selección de texto dentro del input */
+  -webkit-touch-callout: default; /* Permite el menú contextual en dispositivos táctiles */
+  -webkit-appearance: none;   
   text-align: center;
   border-radius: 8px;
   border: none;
@@ -121,13 +128,16 @@ export const InputSubmit = styled.input`
 `;
 
 export const InputArea = styled.textarea`
+  -webkit-user-select: auto;     /* Permite la selección de texto dentro del input */
+  -webkit-touch-callout: default; /* Permite el menú contextual en dispositivos táctiles */
+  -webkit-appearance: none;      /* Elimina el estilo predeterminado del navegador */
   resize: none;
   height: 80px;
   background: #1f1f21;
   border-radius: 8px;
   border: 1px solid #a0a0a1;
   font-family: "DM Sans";
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 28px; /* 175% */
