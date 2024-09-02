@@ -16,7 +16,7 @@ export function sendEmail(token) {
             const concatenatedMessages = errorMessages.join(',  ');
             throw new Error(concatenatedMessages);
           }
-          return res.json();
+          return response.json()
         })
         .then((response) => {
         
