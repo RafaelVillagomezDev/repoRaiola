@@ -88,8 +88,8 @@ function Form(props) {
     event.preventDefault();
 
     try {
-      const token = await generateToken(formData);
-      const response = await sendEmail(token);
+      const token = await generateToken();
+      const response = await sendEmail(token,formData);
      
       MySwal.fire({
         icon: "success",
