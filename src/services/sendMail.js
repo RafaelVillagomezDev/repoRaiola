@@ -8,7 +8,7 @@ export function sendEmail(token, formData) {
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(formData),
     })
       .then((response) => {
         if (!response.ok) {
