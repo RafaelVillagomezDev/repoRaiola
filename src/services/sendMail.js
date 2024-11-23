@@ -1,4 +1,5 @@
-export function sendEmail(token, formData) {
+function sendEmail(token, formData) {
+   const {data}=token
   return new Promise((resolve, reject) => {
     const url = "https://yandrydev.es:3000/api/v1/send";
 
@@ -6,23 +7,31 @@ export function sendEmail(token, formData) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${data}`,
       },
       body: JSON.stringify(formData),
     })
       .then((response) => {
         if (!response.ok) {
-          const errorMessages = response.errors.map((error) => error.msg);
-          const concatenatedMessages = errorMessages.join(",  ");
-          throw new Error(concatenatedMessages);
+          // Verifica si la respuesta contiene errores antes de acceder
+          return response.json().then((data) => {
+            if (data.errors && Array.isArray(data.errors)) {
+              const errorMessages = data.errors.map((error) => error.msg);
+              const concatenatedMessages = errorMessages.join(", ");
+              throw new Error(concatenatedMessages);
+            } else {
+              // Si no hay 'errors', arroja un mensaje genérico
+              throw new Error("Error desconocido");
+            }
+          });
         }
         return response.json();
       })
-      .then((response) => {
-        resolve(response); // Resuelve la promesa con la respuesta
+      .then((data) => {
+        resolve(data); // Resuelve la promesa con la respuesta
       })
       .catch((error) => {
-        reject(error); // Rechaza la promesa con el error
+        reject(error.message || error); // Rechaza la promesa con el mensaje de error
       });
   });
 }
