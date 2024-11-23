@@ -1,4 +1,4 @@
-function sendEmail(token, formData) {
+export function sendEmail(token, formData) {
    const {data}=token
   return new Promise((resolve, reject) => {
     const url = "https://yandrydev.es:3000/api/v1/send";
