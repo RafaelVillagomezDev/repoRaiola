@@ -8,29 +8,28 @@ import { HelmetProvider } from "react-helmet-async";
 
 const Main = lazy(() => import("./pages/main/Main"));
 const About = lazy(() => import("./pages/about/About"));
-const ErrorPage = lazy(() => import("./pages/error/error-page"));
 const Proyects = lazy(() => import("./pages/proyects/Proyects"));
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
-    errorElement: <ErrorPage />,
+   
   },
   {
     path: "/about",
     element: <About />,
-    errorElement: <ErrorPage />,
+  
   },
   {
     path: "/home",
     element: <Main />,
-    errorElement: <ErrorPage />,
+    
   },
   {
     path: "/proyects",
     element: <Proyects />,
-    errorElement: <ErrorPage />,
+    
   },
 ]);
 
