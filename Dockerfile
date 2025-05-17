@@ -1,5 +1,5 @@
 # Etapa 1: Construcción de la aplicación
-FROM node:18 as build
+FROM node:18 AS build
 
 # Crear el directorio de la aplicación
 RUN mkdir -p /app
@@ -34,14 +34,11 @@ COPY .nginx/nginx.conf /etc/nginx/conf.d/default.conf
 COPY public/robots.txt /usr/share/nginx/html/robots.txt
 COPY public/sitemap.xml /usr/share/nginx/html/sitemap.xml
 
-# Copy Indexado
+# Ajusta permisos en robots.txt y sitemap.xml
 RUN chmod 644 /usr/share/nginx/html/robots.txt /usr/share/nginx/html/sitemap.xml
-
 
 # Copia los archivos estáticos construidos desde la etapa de build
 COPY --from=build /app/dist /usr/share/nginx/html/
-
-
 
 # Copia los certificados SSL a la ubicación correcta
 COPY .nginx/ssl/yandrydev.es.crt /etc/nginx/ssl/yandrydev.es.crt
