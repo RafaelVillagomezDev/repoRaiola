@@ -26,5 +26,5 @@ jobs:
           push: true
           # Make sure to replace with your own namespace and repository
           tags: |
-            namespace/example:latest 
+            yandryvilla/dockploy-porfolio:v1 
           platforms: linux/amd64
